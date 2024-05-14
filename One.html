@@ -24,16 +24,17 @@
 
         span {
             background: green;
-            width: 5px;
-            height: 5px;
+            width: 1px;
+            height: 1px;
             border-radius: 100%;
-            box-shadow: 0 0 10px 5px green;
-            opacity: 0;
+            box-shadow: 0 0 10px 2px green;
+            /* opacity: 0; */
         }
 
         span.click-change {
             opacity: 1;
             animation: animate .1s linear 1;
+            position: absolute;
         }
 
         @keyframes animate {
@@ -53,9 +54,11 @@
         const span = document.querySelector("span");
         console.log(span)
 
-        clickContainer.addEventListener("click", () => {
+        clickContainer.addEventListener("click", (ev) => {
             span.classList.add("click-change");
             // span.classList.toggle("click-change");
+            span.style.top = `${ev.clientY}px`;
+            span.style.left = `${ev.clientX}px`;
             console.log(span)
             setTimeout(() => {
                 span.classList.remove("click-change");
