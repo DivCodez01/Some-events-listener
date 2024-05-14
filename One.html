@@ -24,15 +24,22 @@
 
         span {
             background: green;
-            width: 10px;
-            height: 10px;
+            width: 5px;
+            height: 5px;
             border-radius: 100%;
-            box-shadow: 0 0 10px 15px green;
-            /* opacity: 0; */
+            box-shadow: 0 0 10px 5px green;
+            opacity: 0;
         }
 
         span.click-change {
             opacity: 1;
+            animation: animate .1s linear 1;
+        }
+
+        @keyframes animate {
+            100% {
+                box-shadow: 0 0 10px 10px green;
+            }
         }
     </style>
 </head>
@@ -51,7 +58,7 @@
             // span.classList.toggle("click-change");
             console.log(span)
             setTimeout(() => {
-                span.classList.remove("click-change")
+                span.classList.remove("click-change");
             }, 50);
         })
     </script>
