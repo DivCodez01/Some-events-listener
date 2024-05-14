@@ -9,7 +9,7 @@
         * {
             box-sizing: border-box;
             padding: 0;
-            /* margin: 0; */
+            margin: 0;
         }
 
         body {
@@ -19,6 +19,7 @@
         div {
             width: 100%;
             display: flex;
+            height: 100vh;
         }
 
         span {
@@ -27,7 +28,7 @@
             height: 10px;
             border-radius: 100%;
             box-shadow: 0 0 10px 15px green;
-            opacity: 0;
+            /* opacity: 0; */
         }
 
         span.click-change {
@@ -42,10 +43,16 @@
     </div>
     <script>
         const clickContainer = document.querySelector(".click-container");
-        const clickChange = document.querySelector("span");
+        const span = document.querySelector("span");
+        console.log(span)
 
         clickContainer.addEventListener("click", () => {
-            clickChange.classList.toggle("click-change");
+            span.classList.add("click-change");
+            // span.classList.toggle("click-change");
+            console.log(span)
+            setTimeout(() => {
+                span.classList.remove("click-change")
+            }, 50);
         })
     </script>
 </body>
