@@ -30,17 +30,23 @@
             opacity: 0;
         }
 
-        span.click-change {}
+        span.click-change {
+            opacity: 1;
+        }
     </style>
 </head>
 
 <body>
     <div class="click-container">
-        <span class="click-change"></span>
+        <span></span>
     </div>
     <script>
         const clickContainer = document.querySelector(".click-container");
-        const clickChange = document.querySelector("click-change");
+        const clickChange = document.querySelector("span");
+
+        clickContainer.addEventListener("click", () => {
+            clickChange.classList.toggle("click-change");
+        })
     </script>
 </body>
 
