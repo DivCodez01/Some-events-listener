@@ -16,8 +16,11 @@ const prevElms = () => {
 
 const nxtElms = () => {
     nbr++;
-    if (nbr < imgData.length - 1) {
+    if (nbr > imgData.length - 1) {
         nbr = 0;
+        firstImage(nbr);
+    } else {
+        firstImage(nbr);
     }
 }
 
@@ -37,4 +40,8 @@ firstImage(nbr);
 
 prvButton.addEventListener("click", () => {
     prevElms();
+})
+
+nxtButton.addEventListener("click", () => {
+    nxtElms();
 })
