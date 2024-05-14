@@ -5,11 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        :root {
+            --backColor: rgb(119, 119, 119);
+            --divBackcolor: white;
+            --myflex: flex;
+            --center: center;
+            --autoWidth: 100%;
+            --autoHeight: 100vh;
+            --reject: none;
+        }
+
+        body {
+            background: var(--backColor);
+            display: var(--myflex);
+            justify-content: var(--center);
+            align-items: var(--center);
+            width: var(--autoWidth);
+            height: var(--autoHeight);
+        }
+    </style>
 </head>
 
 <body>
     <!-- image change -->
-    <div class="my-image">
+    <div class="image-container">
         <img src="" alt="my image">
     </div>
 </body>
