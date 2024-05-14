@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            /* margin: 0; */
+        }
+
         body {
             background: rgb(148, 148, 148);
         }
@@ -17,10 +23,14 @@
 
         span {
             background: green;
-            width: 30px;
-            height: 30px;
+            width: 10px;
+            height: 10px;
             border-radius: 100%;
+            box-shadow: 0 0 10px 15px green;
+            opacity: 0;
         }
+
+        span.click-change {}
     </style>
 </head>
 
