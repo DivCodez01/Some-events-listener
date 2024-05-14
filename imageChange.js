@@ -15,7 +15,10 @@ const prevElms = () => {
 }
 
 const nxtElms = () => {
-
+    nbr++;
+    if (nbr < imgData.length - 1) {
+        nbr = 0;
+    }
 }
 
 const firstImage = (countImage) => {
@@ -28,7 +31,6 @@ const firstImage = (countImage) => {
     let src = `${source}${image}${convert}`;
     img.setAttribute("alt", `${alt}`);
     img.src = src;
-    console.log(img)
 }
 
 firstImage(nbr);
