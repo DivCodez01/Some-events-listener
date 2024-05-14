@@ -14,6 +14,10 @@ const prevElms = () => {
     }
 }
 
+const nxtElms = () => {
+
+}
+
 const firstImage = (countImage) => {
     let image = imgData[countImage].image;
     let convert = imgData[countImage].convert;
