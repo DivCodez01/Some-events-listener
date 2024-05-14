@@ -4,6 +4,10 @@ const nxtButton = document.querySelector("button:last-child");
 const header = document.querySelector("h1");
 let nbr = 0;
 
+let imageLocalStorage = JSON.parse(localStorage.getItem("countImage"));
+
+nbr = imageLocalStorage;
+
 const prevElms = () => {
     nbr--;
     if (nbr < 0) {
@@ -34,6 +38,7 @@ const firstImage = (countImage) => {
     let src = `${source}${image}${convert}`;
     img.setAttribute("alt", `${alt}`);
     img.src = src;
+    localStorage.setItem("countImage", JSON.stringify(countImage));
 }
 
 firstImage(nbr);
