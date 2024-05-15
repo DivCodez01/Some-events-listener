@@ -170,13 +170,39 @@
             align-items: center;
             border-radius: 50%;
             height: 65px;
+            animation: playBorder 1s linear infinite;
         }
 
         button {
             clip-path: polygon(0 0, 0% 100%, 100% 50%);
             width: 2em;
             height: 2.5em;
-            animation: PlayBorder 1s linear infinite;
+        }
+
+        @keyframes playBorder {
+            0% {
+                box-shadow: 0;
+            }
+
+            20% {
+                box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+            }
+
+            40% {
+                box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08);
+            }
+
+            60% {
+                box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+            }
+
+            80% {
+                box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
+            }
+
+            100% {
+                box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.08);
+            }
         }
     </style>
 </head>
