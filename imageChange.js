@@ -69,26 +69,28 @@ function addNxtAnimation() {
     img.classList.add("nxtAnimation");
 }
 
-const deltHeader = (txt, incrm, func) => {
+const autoDeltHeaderElms = (txt, incrm, func) => {
     if (txt >= 0) {
         header.innerHTML = txt.toString().substring(0, incrm--);
         let delPeriod = 10 + Math.random() * 100;
         setTimeout(() => {
-            deltHeader(txt, incrm, func);
+            autoDeltHeaderElms(txt, incrm, func);
         }, delPeriod);
     } else if (typeof func == "function") {
         setTimeout(func, 1000);
     }
 }
 
-const autotyping = (txt, incrm, func) => {
+const autotypingHeaderElms = (txt, incrm, func) => {
     if (incrm <= txt.length + 1) {
         header.innerHTML = txt.toString().substring(0, incrm++);
-        let typingPeriod = 10 + Math.random() * 100;
+        let typingPeriod = 250 + Math.random() * 100;
         setTimeout(() => {
-            autotyping(txt, incrm, func)
+            autotypingHedaerElms(txt, incrm, func)
         }, typingPeriod);
     } else if (incrm == txt.length + 1) {
-
+        setTimeout(() => {
+            autoDeltHeaderElms(txt, incrm, func);
+        }, 1000);
     }
 }
