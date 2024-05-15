@@ -18,23 +18,63 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(120deg, black, rgb(60, 70, 62), black);
-            animation: animateBody 1s 1s ease infinite;
+            background: linear-gradient(120deg, black, rgb(109, 119, 111), black);
+            animation: animateBody 2s 1s ease infinite;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         @keyframes animateBody {
-            100% {
-                background: linear-gradient(120deg, black, rgb(39, 70, 45), black);
+            20% {
+                background: linear-gradient(120deg, black, rgb(21, 37, 24), black);
+            }
+
+            40% {
+                background: linear-gradient(120deg, black, rgb(31, 58, 36), black);
+            }
+
+            60% {
+                background: linear-gradient(120deg, black, rgb(36, 75, 43), black);
+            }
+
+            80% {
+                background: linear-gradient(120deg, black, rgb(37, 87, 47), black);
             }
         }
 
         .container {
             width: 350px;
             height: 500px;
-            background: linear-gradient(70deg, rgb(20, 20, 20), rgb(53, 52, 52), rgb(20, 20, 20), rgb(53, 52, 52), rgb(20, 20, 20));
+            background: linear-gradient(70deg, rgb(20, 20, 20), rgb(44, 44, 44), rgb(29, 29, 29), rgb(53, 52, 52), rgb(20, 20, 20));
             border: 3px solid rgb(143, 138, 138);
             box-shadow: 0 0 20px rgb(226, 226, 226);
             border-radius: 13px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: animateCont 2s 1s ease infinite;
+        }
+
+        @keyframes animateCont {
+            20% {
+                box-shadow: 0 0 5px rgb(110, 103, 103);
+                transform: translate(1px);
+            }
+
+            40% {
+                box-shadow: 0 0 10px rgb(226, 226, 226);
+                transform: translate(2px);
+            }
+
+            60% {
+                box-shadow: 0 0 15px rgb(226, 226, 226);
+                transform: translate(3px);
+            }
+
+            80% {
+                box-shadow: 0 0 20px rgb(226, 226, 226);
+                transform: translate(4px);
+            }
         }
     </style>
 </head>
