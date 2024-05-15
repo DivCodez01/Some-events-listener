@@ -159,24 +159,31 @@
         }
 
         .nextPrvPlayBtn-container {
-            display: grid;
-            grid-template-columns: 65px 65px 65px;
+            display: flex;
+            /* grid-template-columns: 65px 65px 65px; */
+            width: 200px;
+            justify-content: space-between;
+            align-items: center;
+
         }
 
         .play-container {
-            background-color: green;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 50%;
-            height: 65px;
+            width: 60px;
+            height: 60px;
             animation: playBorder 2s linear infinite;
+            background: white;
         }
 
         button {
             clip-path: polygon(0 0, 0% 100%, 100% 50%);
-            width: 2em;
-            height: 2.5em;
+            width: 2.2em;
+            height: 2.6em;
+            background: linear-gradient(120deg, rgb(109, 119, 111), black, rgb(109, 119, 111));
+            border: none;
         }
 
         @keyframes playBorder {
@@ -224,6 +231,12 @@
                 box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.08);
             }
         }
+
+        img {
+            width: 45px;
+            height: 40px;
+            border-radius: 50%;
+        }
     </style>
 </head>
 
@@ -243,11 +256,11 @@
             </div>
         </div>
         <div class="nextPrvPlayBtn-container">
-            <img src="" alt="prev">
+            <img src="prev.jpg" alt="prev">
             <div class="play-container">
                 <button>| |</button>
             </div>
-            <img src="" alt="next">
+            <img src="next.jpg" alt="next">
         </div>
     </div>
 </body>
