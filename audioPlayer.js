@@ -8,7 +8,7 @@ const disc = document.querySelector(".disc");
 const musicRange = document.getElementById("range");
 const currentMusic = document.querySelector("label:first-child");
 const cmusicDuratin = document.querySelector("label:first-child");
-const playMusic = document.querySelector("button");
+const playBtn = document.querySelector("button");
 const prevMusic = document.querySelector(".prev");
 const nextMusic = document.querySelector(".nxt");
 const shuffleMusic = document.querySelector(".shuffle");
@@ -21,5 +21,11 @@ const playMusics = (elms) => {
     artistTitle.innerHTML = musicData[elms].artistName;
     let musicSrc = musicData[elms].src;
     audio.src = musicSrc;
+
+    if (playBtn.className == "pause") {
+        playBtn.className = "play";
+    } else {
+        playBtn.className = "pause";
+    }
 
 }

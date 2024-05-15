@@ -185,7 +185,7 @@ label {
     background: white;
 }
 
-button {
+button.pause {
     font-size: 1.8em;
     font-weight: bold;
     border: none;
