@@ -158,13 +158,25 @@
             font-size: .85em;
         }
 
-        .nextPrvPlayBtn-container {}
+        .nextPrvPlayBtn-container {
+            display: grid;
+            grid-template-columns: 65px 65px 65px;
+        }
+
+        .play-container {
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            height: 65px;
+        }
 
         button {
             clip-path: polygon(0 0, 0% 100%, 100% 50%);
             width: 2em;
             height: 2.5em;
-            border: 2px solid red;
+            animation: PlayBorder 1s linear infinite;
         }
     </style>
 </head>
@@ -186,7 +198,7 @@
         </div>
         <div class="nextPrvPlayBtn-container">
             <img src="" alt="prev">
-            <div>
+            <div class="play-container">
                 <button>| |</button>
             </div>
             <img src="" alt="next">
