@@ -113,8 +113,9 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .changeAudio-container {
+        .rangeTime-container {
             width: 100%;
+            margin-bottom: 2em;
         }
 
         input[type="range"] {
@@ -122,6 +123,13 @@
             width: 100%;
             height: 2px;
             background: rgb(96, 148, 106);
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 3px;
+            height: 5px;
+            background: rgb(167, 167, 167);
         }
     </style>
 </head>
@@ -134,17 +142,17 @@
         <div class="disc">
             <span></span>
         </div>
-        <div class="changeAudio-container">
+        <div class="rangeTime-container">
             <input type="range" name="" id="">
             <div class="time-container">
                 <label>00:00</label>
                 <label>00:00</label>
             </div>
-            <div>
-                <img src="" alt="prev">
-                <button>| |</button>
-                <img src="" alt="next">
-            </div>
+        </div>
+        <div>
+            <img src="" alt="prev">
+            <button>| |</button>
+            <img src="" alt="next">
         </div>
     </div>
 </body>
