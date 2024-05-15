@@ -158,10 +158,18 @@
             font-size: .85em;
         }
 
+        .shuffleRepeatPlay-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 .5em 0 .5em;
+        }
+
         .nextPrvPlayBtn-container {
             display: flex;
             /* grid-template-columns: 65px 65px 65px; */
-            width: 200px;
+            width: 160px;
             justify-content: space-between;
             align-items: center;
 
@@ -233,9 +241,16 @@
         }
 
         img {
-            width: 45px;
+            width: 1.6em;
+            height: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .prevNextBtn {
+            width: 40px;
             height: 40px;
-            border-radius: 50%;
+            border-radius: 100%;
         }
     </style>
 </head>
@@ -255,14 +270,14 @@
                 <label>00:00</label>
             </div>
         </div>
-        <div class="nextPrvPlayBtn-container">
+        <div class="shuffleRepeatPlay-container">
             <img src="shuffleOff.png" alt="shuffle">
-            <div>
-                <img src="prev.jpg" alt="prev">
+            <div class="nextPrvPlayBtn-container">
+                <img src="prev.jpg" alt="prev" class="prevNextBtn">
                 <div class="play-container">
                     <button>| |</button>
                 </div>
-                <img src="next.jpg" alt="next">
+                <img src="next.jpg" alt="next" class="prevNextBtn">
             </div>
             <img src="repeatAll.png" alt="repeat">
         </div>
