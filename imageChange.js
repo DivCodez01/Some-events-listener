@@ -94,3 +94,7 @@ const autotypingHeaderElms = (txt, incrm, func) => {
         }, 1000);
     }
 }
+
+const startTypingHeaderElms = (incrm) => {
+
+}
