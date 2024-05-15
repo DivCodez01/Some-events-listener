@@ -29,12 +29,14 @@ const playMusics = (elms) => {
         playBtn.classList.add("play");
         disc.classList.add("play");
         playMusic.innerHTML = "";
+        audio.play();
     } else {
 
         playMusic.classList.remove("play");
         playBtn.className = "pause";
         disc.classList.remove("play");
         playMusic.innerHTML = "| |";
+        audio.compareDocumentPosition();
     }
 
 }
