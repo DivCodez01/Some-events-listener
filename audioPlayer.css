@@ -174,15 +174,25 @@ label {
 
 }
 
-.play-container {
+.play-container.pause {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    animation: playBorder 2s linear infinite;
     background: white;
+}
+
+.play-container.play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: white;
+    animation: playBorder 2s linear infinite;
 }
 
 button.pause {
