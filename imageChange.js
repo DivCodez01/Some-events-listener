@@ -3,6 +3,7 @@ const img = document.querySelector("img");
 const prvButton = document.querySelector("button:first-child");
 const nxtButton = document.querySelector("button:last-child");
 const header = document.querySelector("h1");
+const h2 = document.querySelector("h2");
 let nbr = 0;
 
 let imageLocalStorage = JSON.parse(localStorage.getItem("countImage"));
@@ -48,8 +49,6 @@ const firstImage = (countImage) => {
     img.setAttribute("alt", `${alt}`);
     img.src = src;
     localStorage.setItem("countImage", JSON.stringify(countImage));
-    let autoTypeHeader = [imgData[countImage].title];
-    console.log(autoTypeHeader);
 }
 
 firstImage(nbr);
@@ -73,7 +72,7 @@ function addNxtAnimation() {
 
 const autoDeltHeaderElms = (txt, incrm, func) => {
     if (incrm >= 0) {
-        header.innerHTML = txt.toString().substring(0, incrm--);
+        h2.innerHTML = txt.toString().substring(0, incrm--);
         let delPeriod = 10 + Math.random() * 100;
         setTimeout(() => {
             autoDeltHeaderElms(txt, incrm, func);
@@ -85,8 +84,8 @@ const autoDeltHeaderElms = (txt, incrm, func) => {
 
 const autotypingHeaderElms = (txt, incrm, func) => {
     if (incrm < txt.length + 1) {
-        header.innerHTML = txt.toString().substring(0, incrm++);
-        let typingPeriod = 250 + Math.random() * 100;
+        h2.innerHTML = txt.toString().substring(0, incrm++);
+        let typingPeriod = 250 - Math.random() * 100;
         setTimeout(() => {
             autotypingHeaderElms(txt, incrm, func);
         }, typingPeriod);
@@ -96,14 +95,14 @@ const autotypingHeaderElms = (txt, incrm, func) => {
         }, 1000);
     }
 }
-
+let slideHeader = ["This is", "image next", "and", "slide"];
 const startTypingHeaderElms = (incrm) => {
-    if (typeof header.innerHTML[incrm] == "undefined") {
+    if (typeof slideHeader[incrm] == "undefined") {
         setTimeout(() => {
             startTypingHeaderElms(0);
-        }, 1000);
-    } else if (incrm < header.innerHTML[incrm].length + 1) {
-        autotypingHeaderElms(header.innerHTML[incrm], 0, function () {
+        }, 3000);
+    } else if (incrm < slideHeader[incrm].length + 1) {
+        autotypingHeaderElms(slideHeader[incrm], 0, function () {
             startTypingHeaderElms(incrm + 1);
         })
     }
