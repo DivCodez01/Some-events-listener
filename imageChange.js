@@ -4,8 +4,6 @@ const prvButton = document.querySelector("button:first-child");
 const nxtButton = document.querySelector("button:last-child");
 const header = document.querySelector("h1");
 let nbr = 0;
-let slideHeader = ["home is"];
-console.log(slideHeader)
 
 let imageLocalStorage = JSON.parse(localStorage.getItem("countImage"));
 
@@ -50,6 +48,8 @@ const firstImage = (countImage) => {
     img.setAttribute("alt", `${alt}`);
     img.src = src;
     localStorage.setItem("countImage", JSON.stringify(countImage));
+    let autoTypeHeader = [imgData[countImage].title];
+    console.log(autoTypeHeader);
 }
 
 firstImage(nbr);
@@ -98,12 +98,12 @@ const autotypingHeaderElms = (txt, incrm, func) => {
 }
 
 const startTypingHeaderElms = (incrm) => {
-    if (typeof slideHeader[incrm] == "undefined") {
+    if (typeof header.innerHTML[incrm] == "undefined") {
         setTimeout(() => {
             startTypingHeaderElms(0);
         }, 1000);
-    } else if (incrm < slideHeader[incrm].length + 1) {
-        autotypingHeaderElms(slideHeader[incrm], 0, function () {
+    } else if (incrm < header.innerHTML[incrm].length + 1) {
+        autotypingHeaderElms(header.innerHTML[incrm], 0, function () {
             startTypingHeaderElms(incrm + 1);
         })
     }
