@@ -70,12 +70,14 @@
 
         .animation {
             transform: scale(0);
-            animation: animate 1s linear forwards;
+            opacity: 0;
+            animation: animate .3s ease-in-out forwards;
         }
 
         @keyframes animate {
             100% {
                 transform: scale(1);
+                opacity: 1;
             }
         }
     </style>

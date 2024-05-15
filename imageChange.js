@@ -16,6 +16,12 @@ const prevElms = () => {
     } else {
         firstImage(nbr);
     }
+    addAnimation()
+    console.log(img)
+    setTimeout(() => {
+        img.classList.remove("animation")
+        console.log(img)
+    }, 1000);
 }
 
 const nxtElms = () => {
@@ -44,10 +50,13 @@ const firstImage = (countImage) => {
 firstImage(nbr);
 
 prvButton.addEventListener("click", () => {
-    img.classList.add("animation");
     prevElms();
 })
 
 nxtButton.addEventListener("click", () => {
     nxtElms();
 })
+
+function addAnimation() {
+    img.classList.add("animation");
+}
