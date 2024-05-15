@@ -71,6 +71,10 @@ function addNxtAnimation() {
 
 const deltHeader = (txt, incrm, func) => {
     if (txt >= 0) {
+        header.innerHTML = txt.toString().substring(0, incrm--);
+        let delTime = 10 + Math.random() * 100;
+        setTimeout(() => {
 
+        }, delTime);
     }
 }
