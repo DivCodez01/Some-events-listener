@@ -246,6 +246,11 @@ img {
     cursor: pointer;
 }
 
+img:active {
+    opacity: .3;
+    transform: translateY(-2px);
+}
+
 .prevNextBtn {
     width: 40px;
     height: 40px;
@@ -260,8 +265,8 @@ img {
 }
 
 .repeat-container:active {
-    transform: translateY(-2px);
     opacity: .3;
+    transform: translateY(-2px);
 }
 
 .count-repeat {
