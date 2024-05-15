@@ -86,7 +86,9 @@ const autotyping = (txt, incrm, func) => {
         header.innerHTML = txt.toString().substring(0, incrm++);
         let typingPeriod = 10 + Math.random() * 100;
         setTimeout(() => {
-
+            autotyping(txt, incrm, func)
         }, typingPeriod);
+    } else if (incrm == txt.length + 1) {
+
     }
 }
