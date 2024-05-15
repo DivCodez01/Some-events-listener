@@ -77,6 +77,10 @@ const deltHeader = (txt, incrm, func) => {
             deltHeader(txt, incrm, func);
         }, delTime);
     } else if (typeof func == "function") {
-
+        setTimeout(func, 1000);
     }
+}
+
+const autotyping = (txt, incrm, func) => {
+
 }
