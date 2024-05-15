@@ -1,3 +1,5 @@
+
+
 const songTitle = document.querySelector("h1");
 const artistTitle = document.querySelector("p");
 const disc = document.querySelector(".disc");
@@ -14,6 +16,8 @@ console.log(playMusic);
 let currenttime = "00:00"
 
 const playMusics = (elms) => {
-    songTitle.innerHTML = musicData[0].songName;
-    artistTitle.innerHTML = musicData[0].artistName;
+    songTitle.innerHTML = musicData[elms].songName;
+    artistTitle.innerHTML = musicData[elms].artistName;
+    let musicSrc = musicData[elms].src;
+
 }
