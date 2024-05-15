@@ -70,5 +70,7 @@ function addNxtAnimation() {
 }
 
 const deltHeader = (txt, incrm, func) => {
+    if (txt >= 0) {
 
+    }
 }
