@@ -1,4 +1,4 @@
-let musicElms = [
+let musicData = [
     {
         songName: "Song 1",
         artistName: "Artist 1",

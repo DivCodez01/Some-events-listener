@@ -12,3 +12,8 @@ const repeatMusic = document.querySelector(".repeat")
 console.log(playMusic);
 
 let currenttime = "00:00"
+
+const playMusics = (elms) => {
+    songTitle.innerHTML = musicData[0].songName;
+    artistTitle.innerHTML = musicData[0].artistName;
+}
