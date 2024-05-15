@@ -92,6 +92,7 @@ p {
     position: absolute;
     width: 100%;
     height: 100%;
+    animation: rotateImg 11s linear infinite;
 }
 
 .disc-container {
@@ -104,8 +105,12 @@ p {
     margin-bottom: 3em;
 }
 
+.disc.pause {
+    animation-play-state: paused;
+}
+
 .disc.play {
-    animation: rotateImg 11s linear infinite;
+    animation-play-state: running;
 }
 
 @keyframes rotateImg {

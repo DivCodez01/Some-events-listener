@@ -13,7 +13,7 @@ const prevMusic = document.querySelector(".prev");
 const nextMusic = document.querySelector(".nxt");
 const shuffleMusic = document.querySelector(".shuffle");
 const repeatMusic = document.querySelector(".repeat");
-const playMusic = document.querySelector("play-container");
+const playMusic = document.querySelector(".play-container");
 
 let currenttime = "00:00"
 
@@ -24,19 +24,31 @@ const playMusics = (elms) => {
     audio.src = musicSrc;
 
     if (playBtn.className == "pause") {
-        playBtn.className = "play";
+        playMusic.classList.add("play");
         playMusic.classList.remove("pause");
-        playBtn.classList.add("play");
+        playBtn.className = "play";
+        disc.classList.remove("pause");
         disc.classList.add("play");
-        playMusic.innerHTML = "";
+        playBtn.innerHTML = "";
         audio.play();
+        console.log(audio)
     } else {
-
         playMusic.classList.remove("play");
+        playMusic.classList.add("pause");
         playBtn.className = "pause";
         disc.classList.remove("play");
-        playMusic.innerHTML = "| |";
-        audio.compareDocumentPosition();
+        playBtn.className = "pause";
+        playBtn.innerHTML = "| |";
+        disc.classList.add("pause");
+        audio.pause();
+        console.log(playBtn);
+        console.log(playMusic);
     }
 
 }
+
+// playMusics(0)
+
+playMusic.addEventListener("click", () => {
+    playMusics(0)
+})
