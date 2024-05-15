@@ -82,5 +82,7 @@ const deltHeader = (txt, incrm, func) => {
 }
 
 const autotyping = (txt, incrm, func) => {
+    if (incrm <= txt.length + 1) {
 
+    }
 }
