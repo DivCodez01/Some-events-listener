@@ -1,3 +1,4 @@
+document.title = "IMAGE CHANGE AND ANIMATION";
 const img = document.querySelector("img");
 const prvButton = document.querySelector("button:first-child");
 const nxtButton = document.querySelector("button:last-child");
@@ -66,4 +67,8 @@ function addPrevAnimation() {
 
 function addNxtAnimation() {
     img.classList.add("nxtAnimation");
+}
+
+const deltHeader = (txt, incrm, func) => {
+
 }
