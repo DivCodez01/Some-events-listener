@@ -44,6 +44,7 @@ const firstImage = (countImage) => {
 firstImage(nbr);
 
 prvButton.addEventListener("click", () => {
+    img.classList.add("animation");
     prevElms();
 })
 

@@ -67,6 +67,17 @@
         button:nth-child(2) {
             margin-left: 10px;
         }
+
+        .animation {
+            transform: scale(0);
+            animation: animate 1s linear forwards;
+        }
+
+        @keyframes animate {
+            100% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 
