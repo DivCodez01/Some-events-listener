@@ -57,4 +57,5 @@ const musicsPlayElms = (elms) => {
         audio.pause();
     }
 }
+musicsPlayElms(0)
 
