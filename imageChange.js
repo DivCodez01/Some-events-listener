@@ -4,6 +4,8 @@ const prvButton = document.querySelector("button:first-child");
 const nxtButton = document.querySelector("button:last-child");
 const header = document.querySelector("h1");
 let nbr = 0;
+let slideHeader = ["home is"];
+console.log(slideHeader)
 
 let imageLocalStorage = JSON.parse(localStorage.getItem("countImage"));
 
@@ -70,7 +72,7 @@ function addNxtAnimation() {
 }
 
 const autoDeltHeaderElms = (txt, incrm, func) => {
-    if (txt >= 0) {
+    if (incrm >= 0) {
         header.innerHTML = txt.toString().substring(0, incrm--);
         let delPeriod = 10 + Math.random() * 100;
         setTimeout(() => {
@@ -82,11 +84,11 @@ const autoDeltHeaderElms = (txt, incrm, func) => {
 }
 
 const autotypingHeaderElms = (txt, incrm, func) => {
-    if (incrm <= txt.length + 1) {
+    if (incrm < txt.length + 1) {
         header.innerHTML = txt.toString().substring(0, incrm++);
         let typingPeriod = 250 + Math.random() * 100;
         setTimeout(() => {
-            autotypingHedaerElms(txt, incrm, func)
+            autotypingHeaderElms(txt, incrm, func);
         }, typingPeriod);
     } else if (incrm == txt.length + 1) {
         setTimeout(() => {
@@ -96,13 +98,15 @@ const autotypingHeaderElms = (txt, incrm, func) => {
 }
 
 const startTypingHeaderElms = (incrm) => {
-    if (typeof header.innerHTML.length == "undefined") {
+    if (typeof slideHeader[incrm] == "undefined") {
         setTimeout(() => {
             startTypingHeaderElms(0);
         }, 1000);
-    } else if (incrm > header.innerHTML.length + 1) {
-        autotypingHeaderElms(header.innerHTML[incrm], 0, function () {
+    } else if (incrm < slideHeader[incrm].length + 1) {
+        autotypingHeaderElms(slideHeader[incrm], 0, function () {
             startTypingHeaderElms(incrm + 1);
         })
     }
 }
+
+startTypingHeaderElms(0);
