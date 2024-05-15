@@ -74,7 +74,9 @@ const deltHeader = (txt, incrm, func) => {
         header.innerHTML = txt.toString().substring(0, incrm--);
         let delTime = 10 + Math.random() * 100;
         setTimeout(() => {
-
+            deltHeader(txt, incrm, func);
         }, delTime);
+    } else if (typeof func == "function") {
+
     }
 }
