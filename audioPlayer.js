@@ -17,11 +17,7 @@ const playMusic = document.querySelector(".play-container");
 
 let currenttime = "00:00"
 
-const playMusics = (elms) => {
-    songTitle.innerHTML = musicData[elms].songName;
-    artistTitle.innerHTML = musicData[elms].artistName;
-    let musicSrc = musicData[elms].src;
-    audio.src = musicSrc;
+const musicBackelms = () => {
 
     if (playBtn.className == "pause") {
         playMusic.classList.add("play");
@@ -30,8 +26,6 @@ const playMusics = (elms) => {
         disc.classList.remove("pause");
         disc.classList.add("play");
         playBtn.innerHTML = "";
-        audio.play();
-        console.log(audio)
     } else {
         playMusic.classList.remove("play");
         playMusic.classList.add("pause");
@@ -40,9 +34,6 @@ const playMusics = (elms) => {
         playBtn.className = "pause";
         playBtn.innerHTML = "| |";
         disc.classList.add("pause");
-        audio.pause();
-        console.log(playBtn);
-        console.log(playMusic);
     }
 
 }
@@ -50,5 +41,20 @@ const playMusics = (elms) => {
 // playMusics(0)
 
 playMusic.addEventListener("click", () => {
-    playMusics(0)
+    musicBackelms()
+    musicsPlayElms(0)
 })
+
+const musicsPlayElms = (elms) => {
+    songTitle.innerHTML = musicData[elms].songName;
+    artistTitle.innerHTML = musicData[elms].artistName;
+    let musicSrc = musicData[elms].src;
+    audio.src = musicSrc;
+
+    if (playBtn.className == "play") {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+}
+
