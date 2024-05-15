@@ -272,7 +272,7 @@ img {
     left: 10px;
     font-size: 13px;
     text-shadow: 0px 1px 1px white;
-    /* display: none; */
+    display: none;
 }
 
 hr {
