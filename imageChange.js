@@ -102,7 +102,7 @@ const startTypingHeaderElms = (incrm) => {
         }, 1000);
     } else if (incrm > header.innerHTML.length + 1) {
         autotypingHeaderElms(header.innerHTML[incrm], 0, function () {
-
+            startTypingHeaderElms(incrm + 1);
         })
     }
 }
