@@ -42,6 +42,8 @@
             background-size: 100% 100%;
             border-radius: 10px;
             border: var(--reject);
+            animation: beeping 1s linear infinite;
+            opacity: 0.9;
         }
 
         img {
@@ -81,6 +83,12 @@
             transform: scale(0.8) translateX(400px);
             opacity: 0;
             animation: nxtAnimate .3s ease-in-out forwards;
+        }
+
+        @keyframes beeping {
+            100% {
+                opacity: 1;
+            }
         }
 
         @keyframes prevAnimate {
