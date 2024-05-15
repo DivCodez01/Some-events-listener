@@ -105,6 +105,16 @@
             margin-bottom: 3em;
         }
 
+        .disc.play {
+            animation: rotateImg 11s linear infinite;
+        }
+
+        @keyframes rotateImg {
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+
         span {
             position: absolute;
             display: flex;
@@ -147,6 +157,15 @@
         label {
             font-size: .85em;
         }
+
+        .nextPrvPlayBtn-container {}
+
+        button {
+            clip-path: polygon(0 0, 0% 100%, 100% 50%);
+            width: 2em;
+            height: 2.5em;
+            border: 2px solid red;
+        }
     </style>
 </head>
 
@@ -155,7 +174,7 @@
     <div class="container">
         <h1>SONG NAME</h1>
         <p>ARTIST NAME</p>
-        <div class="disc">
+        <div class="disc play">
             <span></span>
         </div>
         <div class="rangeTime-container">
@@ -165,9 +184,11 @@
                 <label>00:00</label>
             </div>
         </div>
-        <div>
+        <div class="nextPrvPlayBtn-container">
             <img src="" alt="prev">
-            <button>| |</button>
+            <div>
+                <button>| |</button>
+            </div>
             <img src="" alt="next">
         </div>
     </div>
