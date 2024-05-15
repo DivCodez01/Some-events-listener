@@ -86,16 +86,31 @@
         p {
             color: rgb(112, 112, 112);
             text-shadow: 1px 1px 3px rgb(0, 0, 0);
-            padding-bottom: 2em;
+            padding-bottom: 3em;
         }
 
         .disc {
             width: 170px;
             height: 170px;
-            background: url(images/img4.jpg);
+            background: url(images/img3.jpg);
             background-size: contain;
             border-radius: 100%;
             box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3em;
+        }
+
+        span {
+            position: absolute;
+            display: flex;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            background: linear-gradient(120deg, rgb(109, 119, 111), black, rgb(109, 119, 111));
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
     </style>
 </head>
@@ -111,8 +126,8 @@
         <div>
             <input type="range" name="" id="">
             <div class="time-container">
-                <span>00:00</span>
-                <span>00:00</span>
+                <label>00:00</label>
+                <label>00:00</label>
             </div>
             <div>
                 <img src="" alt="prev">
