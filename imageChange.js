@@ -16,12 +16,12 @@ const prevElms = () => {
     } else {
         firstImage(nbr);
     }
-    addAnimation()
+    addPrevAnimation()
     console.log(img)
     setTimeout(() => {
-        img.classList.remove("animation")
+        img.classList.remove("prevAnimation")
         console.log(img)
-    }, 1000);
+    }, 350);
 }
 
 const nxtElms = () => {
@@ -57,6 +57,11 @@ nxtButton.addEventListener("click", () => {
     nxtElms();
 })
 
-function addAnimation() {
-    img.classList.add("animation");
+function addPrevAnimation() {
+    img.classList.add("prevAnimation");
+}
+
+
+function addNxtPrevAnimation() {
+    img.classList.add("nxtAnimation");
 }
