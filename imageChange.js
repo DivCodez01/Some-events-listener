@@ -100,5 +100,7 @@ const startTypingHeaderElms = (incrm) => {
         setTimeout(() => {
             startTypingHeaderElms(0);
         }, 1000);
+    } else if (incrm > header.innerHTML.length + 1) {
+        autotypingHeaderElms()
     }
 }
