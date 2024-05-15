@@ -72,10 +72,10 @@ function addNxtAnimation() {
 const deltHeader = (txt, incrm, func) => {
     if (txt >= 0) {
         header.innerHTML = txt.toString().substring(0, incrm--);
-        let delTime = 10 + Math.random() * 100;
+        let delPeriod = 10 + Math.random() * 100;
         setTimeout(() => {
             deltHeader(txt, incrm, func);
-        }, delTime);
+        }, delPeriod);
     } else if (typeof func == "function") {
         setTimeout(func, 1000);
     }
@@ -83,6 +83,10 @@ const deltHeader = (txt, incrm, func) => {
 
 const autotyping = (txt, incrm, func) => {
     if (incrm <= txt.length + 1) {
+        header.innerHTML = txt.toString().substring(0, incrm++);
+        let typingPeriod = 10 + Math.random() * 100;
+        setTimeout(() => {
 
+        }, typingPeriod);
     }
 }
