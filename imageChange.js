@@ -97,6 +97,8 @@ const autotypingHeaderElms = (txt, incrm, func) => {
 
 const startTypingHeaderElms = (incrm) => {
     if (typeof header.innerHTML.length == "undefined") {
-
+        setTimeout(() => {
+            startTypingHeaderElms(0);
+        }, 1000);
     }
 }
