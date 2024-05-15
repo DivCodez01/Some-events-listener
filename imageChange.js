@@ -17,10 +17,8 @@ const prevElms = () => {
         firstImage(nbr);
     }
     addPrevAnimation()
-    console.log(img)
     setTimeout(() => {
         img.classList.remove("prevAnimation")
-        console.log(img)
     }, 350);
 }
 
@@ -32,6 +30,10 @@ const nxtElms = () => {
     } else {
         firstImage(nbr);
     }
+    addNxtAnimation();
+    setTimeout(() => {
+        img.classList.remove("nxtAnimation")
+    }, 350);
 }
 
 const firstImage = (countImage) => {
