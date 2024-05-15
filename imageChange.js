@@ -62,6 +62,6 @@ function addPrevAnimation() {
 }
 
 
-function addNxtPrevAnimation() {
+function addNxtAnimation() {
     img.classList.add("nxtAnimation");
 }

@@ -71,12 +71,25 @@
         .prevAnimation {
             transform: scale(0.8) translateX(-400px);
             opacity: 0;
-            animation: animate .3s ease-in-out forwards;
+            animation: prevAnimate .3s ease-in-out forwards;
         }
 
-        @keyframes animate {
+        .nxtAnimation {
+            transform: scale(0.8) translateX(400px);
+            opacity: 0;
+            animation: nxtAnimate .3s ease-in-out forwards;
+        }
+
+        @keyframes prevAnimate {
             100% {
                 transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes nxtAnimate {
+            100% {
+                transform: scale(1) translateX(0);
                 opacity: 1;
             }
         }
