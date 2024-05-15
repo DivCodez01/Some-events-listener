@@ -13,6 +13,7 @@ body {
     background: linear-gradient(120deg, black, rgb(109, 119, 111), black);
     animation: animateBody 2s 1s ease infinite;
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 
 @keyframes animateBody {
@@ -84,16 +85,22 @@ p {
 }
 
 .disc {
-    width: 170px;
-    height: 170px;
     background: url(images/img3.jpg);
     background-size: contain;
     border-radius: 100%;
     box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.disc-container {
     position: relative;
+    width: 170px;
+    height: 170px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin-bottom: 3em;
 }
 
