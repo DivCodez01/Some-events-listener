@@ -7,5 +7,8 @@ const cmusicDuratin = document.querySelector("label:first-child");
 const playMusic = document.querySelector("button");
 const prevMusic = document.querySelector(".prev");
 const nextMusic = document.querySelector(".nxt");
-const shuffleMusic = document.querySelector("shuffle");
+const shuffleMusic = document.querySelector(".shuffle");
+const repeatMusic = document.querySelector(".repeat")
 console.log(playMusic);
+
+let currenttime = "00:00"
