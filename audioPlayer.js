@@ -67,7 +67,6 @@ const prevMusics = () => {
 
 prevMusic.addEventListener("click", () => {
     prevMusics();
-    console.log(audio);
     audio.play();
     if (playBtn.className == "pause") {
         playMusic.classList.add("play");
@@ -78,4 +77,26 @@ prevMusic.addEventListener("click", () => {
         playBtn.innerHTML = "";
         audio.play();
     };
-})
+});
+
+const nextMusics = () => {
+    countMusic += 1;
+    if (countMusic == musicData.length) {
+        countMusic = 0;
+    }
+    musicsPlayElms(0);
+}
+
+nextMusic.addEventListener("click", () => {
+    nextMusics();
+    audio.play();
+    if (playBtn.className == "pause") {
+        playMusic.classList.add("play");
+        playMusic.classList.remove("pause");
+        playBtn.className = "play";
+        disc.classList.remove("pause");
+        disc.classList.add("play");
+        playBtn.innerHTML = "";
+        audio.play();
+    };
+});
