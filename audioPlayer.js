@@ -68,6 +68,7 @@ const musicsPlayElms = (elms) => {
     }, 1000);
     setTimeout(() => {
         musicDuratin.innerHTML = stringTime(audio.duration);
+        musicRange.max = audio.duration;
     }, 300);
 }
 
@@ -128,3 +129,7 @@ nextMusic.addEventListener("click", () => {
         audio.play();
     };
 });
+
+musicRange.addEventListener("change", () => {
+    audio.currentTime = musicRange.value;
+})
