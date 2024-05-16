@@ -43,6 +43,11 @@ const musicBackelms = () => {
 
 // playMusics(0)
 
+setInterval(() => {
+    musicRange.value = audio.currentTime;
+    currentMusic.innerHTML = stringTime(audio.currentTime);
+}, 200);
+
 playMusic.addEventListener("click", () => {
     musicBackelms();
 })
