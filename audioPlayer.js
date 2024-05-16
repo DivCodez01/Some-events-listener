@@ -131,7 +131,9 @@ const nextMusics = () => {
     musicsPlayElms(0);
 }
 
-nextMusic.addEventListener("click", () => {
+nextMusic.addEventListener("click", nextFunc);
+
+function nextFunc() {
     nextMusics();
     audio.play();
     if (playBtn.className == "pause") {
@@ -143,7 +145,7 @@ nextMusic.addEventListener("click", () => {
         playBtn.innerHTML = "";
         audio.play();
     };
-});
+};
 
 musicRange.addEventListener("change", () => {
     audio.currentTime = musicRange.value;
@@ -172,4 +174,16 @@ repeatContainer.addEventListener("click", () => {
         repeatContainer.classList.add("all");
         repeatOff.classList.remove("off");
     }
+    repeatFunc();
 })
+
+const repeatFunc = () => {
+    if (repeatContainer.className.includes("off")) {
+        nextMusic.removeEventListener("click", nextFunc);
+        console.log("good")
+    } else {
+        nextMusic.addEventListener("click", nextFunc);
+    }
+}
+
+// repeatFunc()
