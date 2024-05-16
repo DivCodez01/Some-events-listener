@@ -1,6 +1,7 @@
 document.title = "Music Player";
 
 const audio = document.querySelector("#audio");
+console.log(audio)
 
 const songTitle = document.querySelector("h1");
 const artistTitle = document.querySelector("p");
@@ -15,7 +16,7 @@ const shuffleMusic = document.querySelector(".shuffle");
 const repeatMusic = document.querySelector(".repeat");
 const playMusic = document.querySelector(".play-container");
 
-let currenttime = "00:00"
+let currentTime = 0;
 
 const musicBackelms = () => {
 
@@ -35,27 +36,28 @@ const musicBackelms = () => {
         playBtn.innerHTML = "| |";
         disc.classList.add("pause");
     }
-
 }
 
 // playMusics(0)
 
-playMusic.addEventListener("click", () => {
-    musicBackelms()
-    musicsPlayElms(0)
+playMusic.addEventListener("click", (ev) => {
+    if (playBtn.className == "pause") {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+    musicBackelms();
+    ev.preventDefault()
 })
 
 const musicsPlayElms = (elms) => {
     songTitle.innerHTML = musicData[elms].songName;
     artistTitle.innerHTML = musicData[elms].artistName;
+    disc.style.backgroundImage = `url("${musicData[elms].image}")`;
     let musicSrc = musicData[elms].src;
     audio.src = musicSrc;
-
-    if (playBtn.className == "play") {
-        audio.play();
-    } else {
-        audio.pause();
-    }
 }
-musicsPlayElms(0)
+musicsPlayElms(0);
 
+const prevMusics = (elms) => {
+}

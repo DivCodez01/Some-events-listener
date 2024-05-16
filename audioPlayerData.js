@@ -3,7 +3,7 @@ let musicData = [
         songName: "Song 1",
         artistName: "Artist 1",
         src: "musics/music1.mp3",
-        image: "IMG1.JPG"
+        image: "images/IMG1.JPG"
     },
     {
         songName: "Song 3",
