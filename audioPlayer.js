@@ -7,7 +7,7 @@ const artistTitle = document.querySelector("p");
 const disc = document.querySelector(".disc");
 const musicRange = document.getElementById("range");
 const currentMusic = document.querySelector("label:first-child");
-const cmusicDuratin = document.querySelector("label:first-child");
+const musicDuratin = document.querySelector("label:first-child");
 const playBtn = document.querySelector("button");
 const prevMusic = document.querySelector(".prev");
 const nextMusic = document.querySelector(".nxt");
@@ -54,6 +54,13 @@ const musicsPlayElms = (elms) => {
     disc.style.backgroundImage = `url("${musicDatas.image}")`;
     let musicSrc = musicDatas.src;
     audio.src = musicSrc;
+
+    musicRange.value = currentTime;
+    setTimeout(() => {
+    }, 1000);
+    setTimeout(() => {
+        musicDuratin.innerHTML = stringTime(audio.duration);
+    }, 1000);
 }
 musicsPlayElms(0);
 
