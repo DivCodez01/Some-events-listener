@@ -158,10 +158,11 @@ shuffleMusic.addEventListener("click", () => {
 })
 
 repeatContainer.addEventListener("click", () => {
-    if (repeatContainer.className.includes("on")) {
-        repeatContainer.classList.remove("on");
+    if (repeatContainer.className.includes("all")) {
+        repeatContainer.classList.remove("all");
         repeatContainer.classList.add("one");
     } else if (repeatContainer.classList.includes("one")) {
-
+        repeatContainer.classList.remove("one");
+        repeatContainer.classList.add("off");
     }
 })
