@@ -139,3 +139,9 @@ nextMusic.addEventListener("click", () => {
 musicRange.addEventListener("change", () => {
     audio.currentTime = musicRange.value;
 })
+
+shuffleMusic.addEventListener("click", () => {
+    if (shuffleMusic.src == "http://127.0.0.1:5500/images/shuffleOn.png") {
+        shuffleMusic.src = ""
+    }
+})
