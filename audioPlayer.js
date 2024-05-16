@@ -48,16 +48,20 @@ playMusic.addEventListener("click", () => {
 
 const musicsPlayElms = (elms) => {
     elms = countMusic;
-    songTitle.innerHTML = musicData[elms].songName;
-    artistTitle.innerHTML = musicData[elms].artistName;
-    disc.style.backgroundImage = `url("${musicData[elms].image}")`;
-    let musicSrc = musicData[elms].src;
+    let = musicDatas = musicData[elms];
+    songTitle.innerHTML = musicDatas.songName;
+    artistTitle.innerHTML = musicDatas.artistName;
+    disc.style.backgroundImage = `url("${musicDatas.image}")`;
+    let musicSrc = musicDatas.src;
     audio.src = musicSrc;
 }
 musicsPlayElms(0);
 
 const prevMusics = () => {
     countMusic += 1;
+    // if (countMusic == ) {
+
+    // }
     musicsPlayElms(0);
 }
 
