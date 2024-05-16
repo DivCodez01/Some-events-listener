@@ -62,6 +62,11 @@ const musicsPlayElms = (elms) => {
         musicDuratin.innerHTML = stringTime(audio.duration);
     }, 1000);
 }
+
+const stringTime = (time) => {
+    let mins = Math.floor(time / 60);
+}
+
 musicsPlayElms(0);
 
 const prevMusics = () => {
