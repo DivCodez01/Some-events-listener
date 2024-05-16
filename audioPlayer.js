@@ -58,10 +58,10 @@ const musicsPlayElms = (elms) => {
 musicsPlayElms(0);
 
 const prevMusics = () => {
-    countMusic += 1;
-    // if (countMusic == ) {
-
-    // }
+    countMusic -= 1;
+    if (countMusic == -1) {
+        countMusic = musicData.length - 1;
+    }
     musicsPlayElms(0);
 }
 
