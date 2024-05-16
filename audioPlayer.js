@@ -15,7 +15,8 @@ const shuffleMusic = document.querySelector(".shuffle");
 const repeatMusic = document.querySelector(".repeat");
 const playMusic = document.querySelector(".play-container");
 
-let currentTime = 0;
+let currentTime = "00:00";
+currentMusic.innerHTML = currentTime;
 let countMusic = 0;
 
 const musicBackelms = () => {
@@ -55,12 +56,14 @@ const musicsPlayElms = (elms) => {
     let musicSrc = musicDatas.src;
     audio.src = musicSrc;
 
-    musicRange.value = currentTime;
+    currentMusic.innerHTML = currentTime;
+
+    musicRange.value = 0;
     setTimeout(() => {
     }, 1000);
     setTimeout(() => {
         musicDuratin.innerHTML = stringTime(audio.duration);
-    }, 1000);
+    }, 300);
 }
 
 const stringTime = (time) => {
@@ -69,6 +72,10 @@ const stringTime = (time) => {
         mins = `0${mins}`
     }
     let secs = Math.floor(time % 60);
+    if (secs < 10) {
+        secs = `0${secs}`
+    }
+    return `${mins} : ${secs} `
 }
 
 musicsPlayElms(0);
