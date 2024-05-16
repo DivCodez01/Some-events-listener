@@ -142,6 +142,8 @@ musicRange.addEventListener("change", () => {
 
 shuffleMusic.addEventListener("click", () => {
     if (shuffleMusic.src == "http://127.0.0.1:5500/images/shuffleOn.png") {
-        shuffleMusic.src = ""
+        shuffleMusic.src = "images/shuffleOff.png";
+    } else {
+        shuffleMusic.src = "images/shuffleOn.png";
     }
 })
