@@ -205,6 +205,7 @@ button.pause {
     font-size: 1.8em;
     font-weight: bold;
     border: none;
+    transition: .5s ease;
 }
 
 button.play {
@@ -214,6 +215,7 @@ button.play {
     height: 2.6em;
     background: linear-gradient(120deg, rgb(109, 119, 111), black, rgb(109, 119, 111));
     border: none;
+    transition: .5s ease;
 }
 
 @keyframes playBorder {

@@ -7,7 +7,7 @@ const artistTitle = document.querySelector("p");
 const disc = document.querySelector(".disc");
 const musicRange = document.getElementById("range");
 const currentMusic = document.querySelector("label:first-child");
-const musicDuratin = document.querySelector("label:first-child");
+const musicDuratin = document.querySelector("label:last-child");
 const playBtn = document.querySelector("button");
 const prevMusic = document.querySelector(".prev");
 const nextMusic = document.querySelector(".nxt");
@@ -65,6 +65,10 @@ const musicsPlayElms = (elms) => {
 
 const stringTime = (time) => {
     let mins = Math.floor(time / 60);
+    if (mins < 10) {
+        mins = `0${mins}`
+    }
+    let secs = Math.floor(time % 60);
 }
 
 musicsPlayElms(0);
