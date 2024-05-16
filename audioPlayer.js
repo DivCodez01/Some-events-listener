@@ -119,6 +119,12 @@ const nextMusics = () => {
     if (countMusic == musicData.length) {
         countMusic = 0;
     }
+
+    if (shuffleMusic.src == "http://127.0.0.1:5500/images/shuffleOn.png") {
+        let mixedMusics = Math.floor(Math.random() * musicData.length);
+        countMusic = mixedMusics;
+    }
+
     musicsPlayElms(0);
 }
 
@@ -141,9 +147,9 @@ musicRange.addEventListener("change", () => {
 })
 
 shuffleMusic.addEventListener("click", () => {
-    if (shuffleMusic.src == "http://127.0.0.1:5500/images/shuffleOn.png") {
-        shuffleMusic.src = "images/shuffleOff.png";
-    } else {
+    if (shuffleMusic.src == "http://127.0.0.1:5500/images/shuffleOff.png") {
         shuffleMusic.src = "images/shuffleOn.png";
+    } else {
+        shuffleMusic.src = "images/shuffleOff.png";
     }
 })
