@@ -161,8 +161,11 @@ repeatContainer.addEventListener("click", () => {
     if (repeatContainer.className.includes("all")) {
         repeatContainer.classList.remove("all");
         repeatContainer.classList.add("one");
-    } else if (repeatContainer.classList.includes("one")) {
+    } else if (repeatContainer.className.includes("one")) {
         repeatContainer.classList.remove("one");
         repeatContainer.classList.add("off");
+    } else {
+        repeatContainer.classList.remove("off");
+        repeatContainer.classList.add("all");
     }
 })
