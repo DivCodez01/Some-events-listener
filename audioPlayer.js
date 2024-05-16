@@ -27,6 +27,7 @@ const musicBackelms = () => {
         disc.classList.remove("pause");
         disc.classList.add("play");
         playBtn.innerHTML = "";
+        audio.play();
     } else {
         playMusic.classList.remove("play");
         playMusic.classList.add("pause");
@@ -35,17 +36,13 @@ const musicBackelms = () => {
         playBtn.className = "pause";
         playBtn.innerHTML = "| |";
         disc.classList.add("pause");
+        audio.pause();
     }
 }
 
 // playMusics(0)
 
 playMusic.addEventListener("click", () => {
-    if (playBtn.className == "pause") {
-        audio.play();
-    } else {
-        audio.pause();
-    }
     musicBackelms();
 })
 
@@ -65,6 +62,16 @@ const prevMusics = () => {
 }
 
 prevMusic.addEventListener("click", () => {
-    prevMusics()
+    prevMusics();
     console.log(audio);
+    audio.play();
+    if (playBtn.className == "pause") {
+        playMusic.classList.add("play");
+        playMusic.classList.remove("pause");
+        playBtn.className = "play";
+        disc.classList.remove("pause");
+        disc.classList.add("play");
+        playBtn.innerHTML = "";
+        audio.play();
+    };
 })
