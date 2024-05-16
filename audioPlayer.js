@@ -1,7 +1,6 @@
 document.title = "Music Player";
 
 const audio = document.querySelector("#audio");
-console.log(audio)
 
 const songTitle = document.querySelector("h1");
 const artistTitle = document.querySelector("p");
@@ -17,6 +16,7 @@ const repeatMusic = document.querySelector(".repeat");
 const playMusic = document.querySelector(".play-container");
 
 let currentTime = 0;
+let countMusic = 0;
 
 const musicBackelms = () => {
 
@@ -40,17 +40,17 @@ const musicBackelms = () => {
 
 // playMusics(0)
 
-playMusic.addEventListener("click", (ev) => {
+playMusic.addEventListener("click", () => {
     if (playBtn.className == "pause") {
         audio.play();
     } else {
         audio.pause();
     }
     musicBackelms();
-    ev.preventDefault()
 })
 
 const musicsPlayElms = (elms) => {
+    elms = countMusic;
     songTitle.innerHTML = musicData[elms].songName;
     artistTitle.innerHTML = musicData[elms].artistName;
     disc.style.backgroundImage = `url("${musicData[elms].image}")`;
@@ -59,5 +59,12 @@ const musicsPlayElms = (elms) => {
 }
 musicsPlayElms(0);
 
-const prevMusics = (elms) => {
+const prevMusics = () => {
+    countMusic += 1;
+    musicsPlayElms(0);
 }
+
+prevMusic.addEventListener("click", () => {
+    prevMusics()
+    console.log(audio);
+})
