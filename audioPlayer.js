@@ -161,11 +161,15 @@ repeatContainer.addEventListener("click", () => {
     if (repeatContainer.className.includes("all")) {
         repeatContainer.classList.remove("all");
         repeatContainer.classList.add("one");
+        repeatOne.classList.add("one");
     } else if (repeatContainer.className.includes("one")) {
         repeatContainer.classList.remove("one");
         repeatContainer.classList.add("off");
+        repeatOne.classList.remove("one");
+        repeatOff.classList.add("off");
     } else {
         repeatContainer.classList.remove("off");
         repeatContainer.classList.add("all");
+        repeatOff.classList.remove("off");
     }
 })

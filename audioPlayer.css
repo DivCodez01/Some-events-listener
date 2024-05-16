@@ -305,6 +305,10 @@ img:active {
     display: none;
 }
 
+.count-repeat.one {
+    display: initial;
+}
+
 hr {
     position: absolute;
     width: 2em;
@@ -317,6 +321,6 @@ hr {
     display: none;
 }
 
-hr.on {
+hr.off {
     display: initial;
 }
