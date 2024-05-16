@@ -12,8 +12,11 @@ const playBtn = document.querySelector("button");
 const prevMusic = document.querySelector(".prev");
 const nextMusic = document.querySelector(".nxt");
 const shuffleMusic = document.querySelector(".shuffle");
-const repeatMusic = document.querySelector(".repeat");
+const repeatOne = document.querySelector(".count-repeat");
+const repeatOff = document.querySelector("hr");
+const repeatAll = document.querySelector(".repeat");
 const playMusic = document.querySelector(".play-container");
+const repeatContainer = document.querySelector(".repeat-container");
 
 let currentTime = "00:00";
 currentMusic.innerHTML = currentTime;
@@ -151,5 +154,14 @@ shuffleMusic.addEventListener("click", () => {
         shuffleMusic.src = "images/shuffleOn.png";
     } else {
         shuffleMusic.src = "images/shuffleOff.png";
+    }
+})
+
+repeatContainer.addEventListener("click", () => {
+    if (repeatContainer.className.includes("on")) {
+        repeatContainer.classList.remove("on");
+        repeatContainer.classList.add("one");
+    } else if (repeatContainer.classList.includes("one")) {
+
     }
 })

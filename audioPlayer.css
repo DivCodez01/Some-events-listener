@@ -316,3 +316,7 @@ hr {
     border-radius: 20px;
     display: none;
 }
+
+hr.on {
+    display: initial;
+}
