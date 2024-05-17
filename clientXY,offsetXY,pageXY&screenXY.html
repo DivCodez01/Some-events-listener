@@ -46,7 +46,9 @@
 
         div.addEventListener("click", (ev) => {
             console.log("screen X : ", ev.screenX);
-            console.log("page X : ", ev.screenX);
+            console.log("screen X : ", ev.pageX);
+            console.log("client X : ", ev.clientX);
+            console.log("offset X : ", ev.offsetX);
         })
     </script>
 </body>
