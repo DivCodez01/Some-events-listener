@@ -67,6 +67,8 @@ const musicsPlayElms = (elms) => {
             console.log("good")
             disc.classList.remove("play");
             disc.classList.add("pause");
+            playBtn.className = "pause";
+            playBtn.innerHTML = "| |";
         } else if (audio.currentTime == audio.duration) {
             nextMusics();
             audio.play();
