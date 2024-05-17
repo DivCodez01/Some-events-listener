@@ -75,7 +75,8 @@ const musicsPlayElms = (elms) => {
             console.log("good")
             audio.play();
         } else if (audio.currentTime == audio.duration && repeatContainer.className.includes("all")) {
-            console.log("repeat all")
+            nextMusics();
+            audio.play();
         }
 
     }, 200);
