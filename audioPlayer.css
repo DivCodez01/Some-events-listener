@@ -133,6 +133,8 @@ p {
 .rangeTime-container {
     width: 100%;
     margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
 }
 
 input[type="range"]:nth-child(1) {
@@ -156,17 +158,20 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
 #volume-range {
     -webkit-appearance: none;
     width: 60%;
-    height: 3px;
+    height: 8px;
     background: rgb(96, 148, 106);
     overflow: hidden;
     border: none;
+    border-radius: 10px;
     cursor: pointer;
+    align-self: center;
 }
 
 .time-container {
     display: flex;
     justify-content: space-between;
     color: rgb(112, 112, 112);
+    margin-bottom: 1em;
 }
 
 label {
