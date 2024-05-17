@@ -71,8 +71,10 @@ const musicsPlayElms = (elms) => {
             playBtn.innerHTML = "| |";
             playMusic.classList.remove("play");
             playMusic.classList.add("pause");
-        } else if (audio.currentTime == audio.duration && ) {
-            nextMusics();
+        } else if (audio.currentTime == audio.duration && repeatContainer.className.includes("one")) {
+            // nextMusics();
+            // audio.play();
+            console.log("good")
             audio.play();
         }
 
