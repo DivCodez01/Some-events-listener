@@ -153,6 +153,16 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
     box-shadow: -400px 0 0 397px rgb(0, 0, 0);
 }
 
+#volume-range {
+    -webkit-appearance: none;
+    width: 60%;
+    height: 3px;
+    background: rgb(96, 148, 106);
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
 .time-container {
     display: flex;
     justify-content: space-between;
