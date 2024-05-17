@@ -47,13 +47,15 @@
         div.addEventListener("click", (ev) => {
             console.log("This is about x");
             console.log("screen X : ", ev.screenX);
-            console.log("screen X : ", ev.pageX);
+            console.log("page X : ", ev.pageX);
             console.log("client X : ", ev.clientX);
             console.log("offset X : ", ev.offsetX);
 
             console.log("This is about Y");
             console.log("screen Y : ", ev.screenY);
-            console.log("screen Y : ", ev.pageY);
+            console.log("page Y : ", ev.pageY);
+            console.log("client Y : ", ev.clientY);
+            console.log("offset Y : ", ev.offsetY);
         })
     </script>
 </body>
