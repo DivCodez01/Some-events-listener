@@ -63,10 +63,12 @@ const musicsPlayElms = (elms) => {
         musicRange.value = audio.currentTime;
         currentMusic.innerHTML = stringTime(audio.currentTime);
 
-        // if (audio.currentTime == audio.duration) {
-        //     nextMusics();
-        //     audio.play();
-        // }
+        if (repeatContainer.className.includes("off") && audio.currentTime == audio.duration) {
+            console.log("good")
+        } else if (audio.currentTime == audio.duration) {
+            nextMusics();
+            audio.play();
+        }
 
     }, 200);
 
@@ -159,15 +161,6 @@ shuffleMusic.addEventListener("click", () => {
     }
 })
 
-let autoNextPlay = setInterval(() => {
-
-    if (audio.currentTime == audio.duration) {
-        nextMusics();
-        audio.play();
-    }
-
-}, 200);
-
 repeatContainer.addEventListener("click", () => {
     if (repeatContainer.className.includes("all")) {
         repeatContainer.classList.remove("all");
@@ -183,28 +176,4 @@ repeatContainer.addEventListener("click", () => {
         repeatContainer.classList.add("all");
         repeatOff.classList.remove("off");
     }
-    repeatFunc();
 })
-
-const repeatFunc = () => {
-    if (repeatContainer.className.includes("off")) {
-        console.log("good");
-        clearInterval(autoNextPlay);
-
-        // setInterval(() => {
-
-        // }, 200);
-        if (audio.currentTime == audio.duration) {
-            playMusic.classList.remove("play");
-            playMusic.classList.add("pause");
-            playBtn.className = "pause";
-            disc.classList.remove("play");
-            playBtn.className = "pause";
-            playBtn.innerHTML = "| |";
-            disc.classList.add("pause");
-            audio.pause();
-            console.log("goodcssc")
-        }
-    } else {
-    }
-}
