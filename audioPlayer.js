@@ -72,10 +72,10 @@ const musicsPlayElms = (elms) => {
             playMusic.classList.remove("play");
             playMusic.classList.add("pause");
         } else if (audio.currentTime == audio.duration && repeatContainer.className.includes("one")) {
-            // nextMusics();
-            // audio.play();
             console.log("good")
             audio.play();
+        } else if (audio.currentTime == audio.duration && repeatContainer.className.includes("all")) {
+            console.log("repeat all")
         }
 
     }, 200);
