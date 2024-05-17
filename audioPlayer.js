@@ -111,6 +111,10 @@ const prevMusics = () => {
     if (countMusic == -1) {
         countMusic = musicData.length - 1;
     }
+
+    if (shuffleMusic.src == "http://127.0.0.1:5500/images/shuffleOn.png") {
+    }
+
     musicsPlayElms(0);
 }
 
