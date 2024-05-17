@@ -177,7 +177,7 @@ VolumeRange.addEventListener("change", () => {
     if (VolumeRange.value >= "80") {
         VolumeRange.classList.add("over");
     } else {
-
+        VolumeRange.classList.remove("over");
     }
 })
 
