@@ -167,6 +167,14 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
     align-self: center;
 }
 
+#volume-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 3px;
+    height: 8px;
+    background: rgb(167, 167, 167);
+    box-shadow: -400px 0 0 397px rgb(0, 0, 0);
+}
+
 .time-container {
     display: flex;
     justify-content: space-between;
