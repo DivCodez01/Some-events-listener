@@ -65,6 +65,8 @@ const musicsPlayElms = (elms) => {
 
         if (repeatContainer.className.includes("off") && audio.currentTime == audio.duration) {
             console.log("good")
+            disc.classList.remove("play");
+            disc.classList.add("pause");
         } else if (audio.currentTime == audio.duration) {
             nextMusics();
             audio.play();
