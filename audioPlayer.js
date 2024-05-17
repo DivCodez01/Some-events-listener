@@ -114,6 +114,7 @@ const prevMusics = () => {
 
     if (shuffleMusic.src == "http://127.0.0.1:5500/images/shuffleOn.png") {
         let mixedMusics = Math.floor(Math.random() * musicData.length);
+        countMusic = mixedMusics;
     }
 
     musicsPlayElms(0);
