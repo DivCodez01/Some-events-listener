@@ -173,6 +173,10 @@ audio.volume = VolumeRange.value / 100;
 
 VolumeRange.addEventListener("change", () => {
     audio.volume = VolumeRange.value / 100;
+
+    if (VolumeRange.value >= "80") {
+
+    }
 })
 
 shuffleMusic.addEventListener("click", () => {

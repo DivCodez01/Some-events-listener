@@ -169,7 +169,7 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
 
 #volume-range::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 3px;
+    width: 2px;
     height: 8px;
     background: rgb(167, 167, 167);
     box-shadow: -400px 0 0 397px rgb(0, 0, 0);
