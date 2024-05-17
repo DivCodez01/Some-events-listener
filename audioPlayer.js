@@ -169,6 +169,11 @@ musicRange.addEventListener("change", () => {
     audio.currentTime = musicRange.value;
 })
 
+audio.volume = VolumeRange.value / 100;
+
+VolumeRange.addEventListener("change", () => {
+})
+
 shuffleMusic.addEventListener("click", () => {
     if (shuffleMusic.src == "http://127.0.0.1:5500/images/shuffleOff.png") {
         shuffleMusic.src = "images/shuffleOn.png";
