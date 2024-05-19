@@ -43,19 +43,20 @@
     </main>
     <script>
         // first way
-        document.querySelector("main").addEventListener("click", (ev) => {
-            ev.target.innerHTML = 100;
-            console.log(ev.composed);
-            console.log(ev.composedPath)
-        })
+        // document.querySelector("main").addEventListener("click", (ev) => {
+        //     ev.target.innerHTML = 100;
+        //     console.log(ev.composed);
+        //     console.log(ev.composedPath)
+        // })
 
         // second way
         document.querySelectorAll("main  *").forEach(addElmClick)
-        addEventListener("click", (ev) => {
-            function addElmClick(elms) {
-
-            }
-        })
+        function addElmClick(elms) {
+            elms.addEventListener("click", (ev) => {
+                console.log(ev.composedPath())
+                ev.target.innerHTML = 100;
+            })
+        };
     </script>
 </body>
 
