@@ -354,3 +354,9 @@ hr {
 hr.off {
     display: initial;
 }
+
+.musicVibrate {
+    width: 200;
+    height: 50px;
+    background-color: green;
+}
