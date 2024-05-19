@@ -45,6 +45,13 @@
         // first way
         document.querySelector("main").addEventListener("click", (ev) => {
             ev.target.innerHTML = 100;
+            console.log(ev.composed);
+            console.log(ev.composedPath)
+        })
+
+        // second way
+        document.querySelector("click", (ev) => {
+
         })
     </script>
 </body>
