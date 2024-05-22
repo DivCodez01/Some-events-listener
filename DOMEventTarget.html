@@ -29,6 +29,12 @@
         function whereYouTyped(ev) {
             let tagName = ev.target.tagName;
             alert(tagName);
+
+            li = ev.target;
+            if (tagName == "SPAN") {
+                li = ev.target.parentElement;
+                console.log(li);
+            }
         }
     </script>
 </body>
