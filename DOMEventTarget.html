@@ -25,7 +25,7 @@
     </main>
     <script>
         document.querySelector(".list-view").addEventListener("click", whereYouTyped);
-
+        let shower = document.querySelector("h2");
         function whereYouTyped(ev) {
             let tagName = ev.target.tagName;
             alert(tagName);
@@ -38,6 +38,8 @@
 
             let id = li.getAttribute("data-id");
             let nm = li.getAttribute("data-name");
+
+            shower.innerHTML = id + ": " + nm;
         }
     </script>
 </body>
