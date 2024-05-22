@@ -106,11 +106,12 @@
         const scrollable = document.querySelector(".scrollable");
 
         scrollable.addEventListener("mousewheel", function (e) {
-            if (e.wheelDeltab > 0) {
+            if (e.wheelDelta > 0) {
                 this.scrollLeft -= 50;
             } else {
                 this.scrollLeft += 50;
             }
+            console.log(e)
         });
     </script>
 </body>
