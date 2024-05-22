@@ -47,7 +47,10 @@
 
         function doPaste(ev) {
             let datas = ev.clipboardData.getData("text/plain");
-            console.log(datas)
+            console.log(datas);
+
+            const span = document.createElement("span");
+            span.innerHTML = datas;
         }
     </script>
 </body>
