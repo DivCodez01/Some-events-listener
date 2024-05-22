@@ -32,6 +32,11 @@
                 console.log(ev.type, ev.target, ev.target.value);
                 // popo.innerHTML = txt.value
             })
+
+            txt.addEventListener("change", ev => {
+                console.log(ev.type, ev.target, ev.target.value);
+                popo.innerHTML = txt.value;
+            })
         }
     </script>
 </body>
