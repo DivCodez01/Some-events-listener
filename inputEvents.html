@@ -24,6 +24,15 @@
         const lnk = document.getElementById("lnk");
         const txt = document.getElementById("txt");
         const popo = document.getElementById("popo");
+
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            txt.addEventListener("input", ev => {
+                console.log(ev.type, ev.target, ev.target.value);
+                // popo.innerHTML = txt.value
+            })
+        }
     </script>
 </body>
 
