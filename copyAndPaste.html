@@ -34,7 +34,14 @@
             range.selectNode(header);
             select.addRange(range);
 
-            document.execCommand("copy")
+            document.execCommand("copy");
+        }
+
+        function doCopy(ev) {
+            let selection = document.getSelection();
+            selection = selection.toString().toUpperCase();
+
+            console.log(selection);
         }
     </script>
 </body>
