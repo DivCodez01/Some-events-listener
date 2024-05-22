@@ -56,6 +56,10 @@
                 if (tagName == "SPAN") {
                     li = li.parentElement;
                 }
+
+                let id = li.getAttribute("data-id");
+                let nm = li.getAttribute("data-name");
+                shower.innerHTML = id + ": " + nm;
             }
         }
 
