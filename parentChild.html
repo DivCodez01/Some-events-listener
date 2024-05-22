@@ -18,10 +18,10 @@
 <script>
     const division = document.querySelector("div");
     const span = document.querySelector("span");
-    console.log(division.firstElementChild);
-    console.log(division.lastElementChild);
-    console.log(span.parentElement);
-    console.log(span.closest("div"));
+    console.log("First child is:", division.firstElementChild);
+    console.log("Last child is:", division.lastElementChild);
+    console.log("Parent element is:", span.parentElement);
+    console.log("Closest to check parent elemen of", span.closest("div"));
     console.log(division.childNodes);
     console.log(division.childNodes[1]);
     console.log(division.childNodes[3]);
