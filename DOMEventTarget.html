@@ -27,7 +27,8 @@
         document.querySelector(".list-view").addEventListener("click", whereYouTyped);
 
         function whereYouTyped(ev) {
-
+            let tagName = ev.target.tagName;
+            alert(tagName);
         }
     </script>
 </body>
