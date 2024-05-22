@@ -23,12 +23,18 @@
     <script>
         const header = document.querySelector("h1");
         header.addEventListener("click", selectElms);
-        // document.addEventListener("copy", doCopy);
+        document.addEventListener("copy", doCopy);
         // document.addEventListener("paste", doPaste);
 
         function selectElms(ev) {
             let select = document.getSelection();
             select.removeAllRanges();
+
+            let range = document.createRange();
+            range.selectNode(header);
+            select.addRange(range);
+
+            document.execCommand("copy")
         }
     </script>
 </body>
