@@ -29,8 +29,9 @@
             // document.querySelector(".list-view").addEventListener("click", whereYouTyped);
             let shower = document.querySelector("h2");
 
-            document.querySelectorAll(".list-item");
-            console.log(document.querySelectorAll(".list-item"));
+            document.querySelectorAll(".list-item").forEach(lis => {
+                lis.addEventListener("click", whereYouTypedOnLis);
+            })
             // function whereYouTyped(ev) {
             //     let tagName = ev.target.tagName;
             //     alert(tagName);
@@ -46,6 +47,9 @@
 
             //     shower.innerHTML = id + ": " + nm;
             // }
+
+            function whereYouTypedOnLis(ev) {
+            }
         }
 
         document.addEventListener("DOMContentLoaded", showerElms);
