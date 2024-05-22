@@ -24,22 +24,25 @@
         </ul>
     </main>
     <script>
-        document.querySelector(".list-view").addEventListener("click", whereYouTyped);
-        let shower = document.querySelector("h2");
-        function whereYouTyped(ev) {
-            let tagName = ev.target.tagName;
-            alert(tagName);
 
-            li = ev.target;
-            if (tagName == "SPAN") {
-                li = ev.target.parentElement;
-                console.log(li);
-            }
+        const showerElms = () => {
+            // document.querySelector(".list-view").addEventListener("click", whereYouTyped);
+            let shower = document.querySelector("h2");
+            // function whereYouTyped(ev) {
+            //     let tagName = ev.target.tagName;
+            //     alert(tagName);
 
-            let id = li.getAttribute("data-id");
-            let nm = li.getAttribute("data-name");
+            //     li = ev.target;
+            //     if (tagName == "SPAN") {
+            //         li = ev.target.parentElement;
+            //         console.log(li);
+            //     }
 
-            shower.innerHTML = id + ": " + nm;
+            //     let id = li.getAttribute("data-id");
+            //     let nm = li.getAttribute("data-name");
+
+            //     shower.innerHTML = id + ": " + nm;
+            // }
         }
     </script>
 </body>
