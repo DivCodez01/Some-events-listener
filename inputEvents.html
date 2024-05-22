@@ -54,10 +54,10 @@
         }
 
         [txt, btn].forEach((element) => {
-            element.addEventListener("click", function () {
+            element.addEventListener("click", (ev) => {
                 setTimeout(() => {
-                    console.log("yoyo")
-                }, 7000);
+                    console.log("Yes! it wait your click 5 second")
+                }, 5000);
             })
         })
     </script>
