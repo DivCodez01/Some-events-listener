@@ -20,6 +20,12 @@
     </p>
     <p contenteditable="">Paste your content here.</p>
     <p contenteditable="">OR paste your content here.</p>
+    <script>
+        const header = document.querySelector("h1");
+        header.addEventListener("click", selectElms);
+        document.addEventListener("copy", doCopy);
+        document.addEventListener("paste", doPaste);
+    </script>
 </body>
 
 </html>
