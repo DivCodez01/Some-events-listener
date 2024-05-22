@@ -43,6 +43,8 @@
 
             console.log(selection);
             ev.clipboardData.setData("text/plain", selection);
+
+            ev.preventDefault(); // it used to delete h1 tagName with strings only
         }
 
         function doPaste(ev) {
@@ -51,6 +53,8 @@
 
             const span = document.createElement("span");
             span.innerHTML = datas;
+
+            ev.preventDefault(); // it used to delete all windows default which gets autholization to paste and tell you to create your own way
         }
     </script>
 </body>
