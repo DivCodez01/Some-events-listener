@@ -17,6 +17,11 @@
     <script>
         const lstSpan = document.querySelector("span:last-child");
         // const lstSpan = document.querySelector("span:nth-child(3)");
+
+        let closest = lstSpan.closest("div");
+        console.log(closest);
+
+        closest.innerHTML = "We used closest";
     </script>
 </body>
 
