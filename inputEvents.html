@@ -46,6 +46,11 @@
             function buttonClicked(ev) {
                 console.log(ev.type, ev.target);
             }
+
+            lnk.addEventListener("click", ev => {
+                ev.preventDefault(); // stop the linkfrom being followed
+                console.log(ev.type, ev.target, ev.currentTarget);
+            })
         }
     </script>
 </body>
