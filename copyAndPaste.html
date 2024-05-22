@@ -42,6 +42,11 @@
             selection = selection.toString().toUpperCase();
 
             console.log(selection);
+            ev.clipboardData.setData("text", selection);
+        }
+
+        function doPaste(ev) {
+
         }
     </script>
 </body>
