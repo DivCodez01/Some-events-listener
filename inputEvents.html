@@ -52,6 +52,14 @@
                 console.log(ev.type, ev.target, ev.currentTarget);
             })
         }
+
+        [txt, btn].forEach((element) => {
+            element.addEventListener("click", function () {
+                setTimeout(() => {
+                    console.log("yoyo")
+                }, 7000);
+            })
+        })
     </script>
 </body>
 
