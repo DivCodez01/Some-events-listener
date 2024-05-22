@@ -41,6 +41,11 @@
             txt.addEventListener("blur", ev => {
                 console.log(ev.type, ev.target, ev.target.value)
             })
+
+            btn.addEventListener("click", buttonClicked)
+            function buttonClicked(ev) {
+                console.log(ev.type, ev.target);
+            }
         }
     </script>
 </body>
