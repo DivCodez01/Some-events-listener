@@ -54,6 +54,11 @@
             const span = document.createElement("span");
             span.innerHTML = datas;
 
+            let selection = document.getSelection();
+            if (!selection.rangeCount) return false;
+            selection.deleteFromDocument();
+            selection.getRangeAt(0).insertNode(span);
+
             ev.preventDefault(); // it used to delete all windows default which gets autholization to paste and tell you to create your own way
         }
     </script>
