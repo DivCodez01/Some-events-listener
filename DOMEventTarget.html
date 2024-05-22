@@ -51,6 +51,11 @@
             function whereYouTypedOnLis(ev) {
                 let tagName = ev.target.tagName;
                 alert(tagName);
+
+                let li = ev.target;
+                if (tagName == "SPAN") {
+                    li = li.parentElement;
+                }
             }
         }
 
