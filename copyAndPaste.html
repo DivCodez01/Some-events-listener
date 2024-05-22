@@ -24,7 +24,7 @@
         const header = document.querySelector("h1");
         header.addEventListener("click", selectElms);
         document.addEventListener("copy", doCopy);
-        // document.addEventListener("paste", doPaste);
+        document.addEventListener("paste", doPaste);
 
         function selectElms(ev) {
             let select = document.getSelection();
@@ -42,11 +42,12 @@
             selection = selection.toString().toUpperCase();
 
             console.log(selection);
-            ev.clipboardData.setData("text", selection);
+            ev.clipboardData.setData("text/plain", selection);
         }
 
         function doPaste(ev) {
-
+            let datas = ev.clipboardData.getData("text/plain");
+            console.log(datas)
         }
     </script>
 </body>
