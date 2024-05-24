@@ -44,7 +44,11 @@
                 .querySelector("main p")
                 .addEventListener("click", f1, { capture: false, once: true });
 
-            document.body.addEventListener("touchstart", f2, { capture: false, passive: true })
+            document.body.addEventListener("touchstart", f2, { capture: false, passive: true });
+
+            document
+                .querySelector("p:nth-child(2)")
+            // .addEventListener("touchstart", f3, { capture: true, passive: false });
         })
 
         function f1(ev) {
@@ -55,6 +59,7 @@
         }
 
         function f2(ev) {
+            console.log("touchstart on body");
         }
 
     </script>
