@@ -48,7 +48,7 @@
 
             document
                 .querySelector("p:nth-child(2)")
-            // .addEventListener("touchstart", f3, { capture: true, passive: false });
+                .addEventListener("touchstart", f3, { capture: true, passive: false });
         })
 
         function f1(ev) {
@@ -62,6 +62,11 @@
             console.log("touchstart on body");
         }
 
+        function f3(ev) {
+            ev.preventDefault();
+            console.log("touchstart on p2");
+            ev.target.style.backgroundColor = "green";
+        }
     </script>
 </body>
 
