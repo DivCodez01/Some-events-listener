@@ -42,11 +42,14 @@
 
             document
                 .querySelector("main p")
-                .addEventListener("click", f1, { capture: false, once: true })
+                .addEventListener("click", f1, { capture: false, once: false })
         })
 
         function f1(ev) {
-
+            ev.preventDefault();
+            let num = Math.random().toString(16).substr(2, 6);
+            console.log(num);
+            ev.target.style.background = `#${num}`;
         }
     </script>
 </body>
