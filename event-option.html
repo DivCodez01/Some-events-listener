@@ -42,7 +42,9 @@
 
             document
                 .querySelector("main p")
-                .addEventListener("click", f1, { capture: false, once: false })
+                .addEventListener("click", f1, { capture: false, once: true });
+
+            document.body.addEventListener("touchstart", f2, { capture: false, passive: true })
         })
 
         function f1(ev) {
@@ -51,6 +53,10 @@
             console.log(num);
             ev.target.style.background = `#${num}`;
         }
+
+        function f2(ev) {
+        }
+
     </script>
 </body>
 
