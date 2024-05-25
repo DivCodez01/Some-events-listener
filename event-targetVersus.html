@@ -38,6 +38,8 @@
 
         function clicked(ev) {
             console.log(`Target is ${ev.target.tagName} and currentTarget is ${ev.currentTarget.tagName}`);
+            ev.currentTarget.style.background = "black";
+            ev.target.style.background = "white";
         }
     </script>
 </body>
