@@ -13,3 +13,15 @@ newDiv.addEventListener("click", () => {
     console.log("hi")
 })
 document.body.appendChild(newDiv);
+
+addGlobalEventListener("click", "div", e => {
+    console.log("hi")
+})
+
+
+
+function addGlobalEventListener(type, selector, callback) {     // this +
+    document.addEventListener(type, e => {
+        if (e.target.matches(selector)) callback(e)
+    })
+}
