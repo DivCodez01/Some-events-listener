@@ -32,6 +32,14 @@
     <main>
         <div></div>
     </main>
+    <script>
+        document.querySelector("main").addEventListener("click", clicked);
+        document.querySelector("div").addEventListener("click", clicked);
+
+        function clicked(ev) {
+            console.log(`Target is ${ev.target.tagName} and currentTarget is ${ev.currentTarget.tagName}`);
+        }
+    </script>
 </body>
 
 </html>
