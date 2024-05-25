@@ -25,3 +25,29 @@ div {
     align-items: center;
     margin: 30px;
 }
+
+[data-long] {
+    background-color: #424242;
+    z-index: 1;
+}
+
+.top,
+.right,
+.bottom,
+.left {
+    position: absolute;
+    transform: translateX(0, 0);
+    opacity: 0.1;
+}
+
+.top.go {
+    animation: animateMoveTop 0.1s 0.8s linear 1 forwards;
+}
+
+.right.go {
+    animation: animateMoveRight 0.1s 0.8s linear 1 forwards;
+}
+
+.bottom.go {
+    animation: animateMoveBottom 0.1s 0.8s linear 1 forwards;
+}
