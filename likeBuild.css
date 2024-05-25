@@ -51,3 +51,35 @@ div {
 .bottom.go {
     animation: animateMoveBottom 0.1s 0.8s linear 1 forwards;
 }
+
+.left.go {
+    animation: animateMoveLeft 0.1s 0.8s linear 1 forwards;
+}
+
+@keyframes animateMoveTop {
+    100% {
+        transform: translate(0, -42px);
+        opacity: 1;
+    }
+}
+
+@keyframes animateMoveRight {
+    100% {
+        transform: translate(42px, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes animateMoveBottom {
+    100% {
+        transform: translate(0, 42px);
+        opacity: 1;
+    }
+}
+
+@keyframes animateMoveLeft {
+    100% {
+        transform: translate(-42px, 0);
+        opacity: 1;
+    }
+}
