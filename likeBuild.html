@@ -41,12 +41,22 @@
                 hideElms.classList.add("go");
             })
 
+            // setTimeout(() => {
+            //     document.querySelectorAll("[hide-data]").forEach((hideElms) => {
+            //         hideElms.classList.remove("go");
+            //     })
+            // }, 5000);
+        };
+
+        yesBtn.addEventListener("touchend", hideLikes);
+
+        function hideLikes(ev) {
             setTimeout(() => {
                 document.querySelectorAll("[hide-data]").forEach((hideElms) => {
                     hideElms.classList.remove("go");
                 })
-            }, 5000);
-        };
+            }, 2800);
+        }
     </script>
 </body>
 

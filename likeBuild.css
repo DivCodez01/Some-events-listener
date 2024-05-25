@@ -41,19 +41,19 @@ div {
 }
 
 .top.go {
-    animation: animateMoveTop 0.1s 0.8s linear 1 forwards;
+    animation: animateMoveTop 0.1s 1.1s linear 1 forwards;
 }
 
 .right.go {
-    animation: animateMoveRight 0.1s 0.8s linear 1 forwards;
+    animation: animateMoveRight 0.1s 1.1s linear 1 forwards;
 }
 
 .bottom.go {
-    animation: animateMoveBottom 0.1s 0.8s linear 1 forwards;
+    animation: animateMoveBottom 0.1s 1.1s linear 1 forwards;
 }
 
 .left.go {
-    animation: animateMoveLeft 0.1s 0.8s linear 1 forwards;
+    animation: animateMoveLeft 0.1s 1.1s linear 1 forwards;
 }
 
 @keyframes animateMoveTop {
