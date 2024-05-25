@@ -3,12 +3,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // document.getElementById("btnToggle").addEventListener("click", toggleInput);
     // document.getElementById("btnPick").addEventListener("click", askForFiles);
-    // document.getElementById("btnInfo").addEventListener("click", showFileIngfo);
+    document.getElementById("btnInfo").addEventListener("click", showFileIngfo);
 });
 
 function filesPicked(ev) {
     let input = ev.target;
     let files = input.files;
     console.log(files);
+}
+
+function showFileIngfo(ev) {
+    const filez = document.getElementById("inputFile").files;
+    for (let i = 0; i < filez.length; i++) {
+        console.group();
+        console.log(filez[i].name);
+        console.log(filez[i].size);
+        console.log(filez[i].type);
+        console.log(filez[i].lastModifiedDate);
+        console.groupEnd();
+    }
 }
 
