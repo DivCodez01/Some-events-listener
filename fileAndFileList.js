@@ -10,9 +10,13 @@ function filesPicked(ev) {
     let input = ev.target;
     let files = input.files;
     console.log(files);
+    if (files.length > 0) {
+        showFileIngfo();
+    }
 }
 
-function showFileIngfo(ev) {
+function showFileIngfo() {
+    if (ev.type == "click") ev.preventDefault();
     const filez = document.getElementById("inputFile").files;
     for (let i = 0; i < filez.length; i++) {
         console.group();
