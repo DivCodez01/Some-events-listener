@@ -17,15 +17,21 @@
 <!-- <div onmousemove="console.log('Hello!')"></div> mousemove is used when you move nouse on element -->
 <!-- <div onmouseout="alert('Hello!')"></div> mouseout is the same as mouseleave -->
 <!-- <div onmouseenter="alert('Hello!')"></div> is the same as click -->
-<div onmouseover="console.log('Hello!')"></div> <!-- is when you move mouse from out toward inside of elms -->
+<div onmouseover="console.log('Hello!')" onclick="alert('Hey, Divin!');"></div>
+<!-- is when you move mouse from out toward inside of elms -->
 <!-- <div onmousedown="console.log('kokolo')"></div> it look like click -->
 <!-- <div onmouseup="console.log('kokolo')"></div> it look like click -->
 
 <script>
     const div = document.querySelector("div");
 
-    // It lead the this like function type
+    // It lead this like function type
     div.addEventListener("click", (e) => {
+        console.log(this)
+    })
+
+    // It lead this like div type
+    div.addEventListener("click", function (e) {
         console.log(this)
     })
 </script>
