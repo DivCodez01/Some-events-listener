@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("inputFile").addEventListener("change", filesPicked);
 
-    // document.getElementById("btnToggle").addEventListener("click", toggleInput);
+    document.getElementById("btnToggle").addEventListener("click", toggleInput);
     // document.getElementById("btnPick").addEventListener("click", askForFiles);
     document.getElementById("btnInfo").addEventListener("click", showFileIngfo);
 });
@@ -15,10 +15,16 @@ function filesPicked(ev) {
     }
 }
 
+function toggleInput(ev) {
+    let control = document.getElementById("inputFile");
+    control.classList.toggle("hidden");
+}
+
 function showFileIngfo() {
     if (ev.type == "click") ev.preventDefault();
     const filez = document.getElementById("inputFile").files;
-    for (let i = 0; i < filez.length; i++) {
+    let len = filez.length;
+    for (let i = 0; i < len; i++) {
         console.group();
         console.log(filez[i].name);
         console.log(filez[i].size);
