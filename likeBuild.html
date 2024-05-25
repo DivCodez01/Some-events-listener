@@ -26,14 +26,21 @@
     </main>
     <script>
         const yesBtn = document.querySelector("[data-long]");
-        const topBtn = document.querySelector("[hide-data]:nth-child(1)");
-        const rightBtn = document.querySelector("[hide-data]:nth-child(2)");
-        const bottomBtn = document.querySelector("[hide-data]:nth-child(3)");
-        const leftBtn = document.querySelector("[hide-data]:nth-child(4)");
+        // const topBtn = document.querySelector("[hide-data]:nth-child(2)");
+        // const rightBtn = document.querySelector("[hide-data]:nth-child(3)");
+        // const bottomBtn = document.querySelector("[hide-data]:nth-child(4)");
+        // const leftBtn = document.querySelector("[hide-data]:last-child");
 
-        yesBtn.addEventListener("touchstart", (ev) => {
+
+        yesBtn.addEventListener("touchstart", showLikes);
+
+        function showLikes(ev) {
             ev.preventDefault();
-        })
+            document.querySelectorAll("[hide-data]").forEach((hideElms) => {
+                hideElms.classList.add("go");
+            })
+            console.log("good")
+        };
     </script>
 </body>
 
