@@ -11,16 +11,17 @@ function filesPicked(ev) {
     let files = input.files;
     console.log(files);
     if (files.length > 0) {
-        showFileIngfo();
+        showFileIngfo(ev);
     }
 }
 
 function toggleInput(ev) {
+    ev.preventDefault();
     let control = document.getElementById("inputFile");
     control.classList.toggle("hidden");
 }
 
-function showFileIngfo() {
+function showFileIngfo(ev) {
     if (ev.type == "click") ev.preventDefault();
     const filez = document.getElementById("inputFile").files;
     let len = filez.length;
