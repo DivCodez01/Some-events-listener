@@ -37,15 +37,15 @@
         function showLikes(ev) {
             ev.preventDefault();
 
-            document.querySelectorAll("[hide-data]").forEach((hideElms) => {
-                hideElms.classList.add("go");
+            document.querySelectorAll("[hide-data]").forEach((showElms) => {
+                showElms.classList.add("go");
             })
 
             // setTimeout(() => {
             //     document.querySelectorAll("[hide-data]").forEach((hideElms) => {
             //         hideElms.classList.remove("go");
             //     })
-            // }, 5000);
+            //  }, 5000);
         };
 
         yesBtn.addEventListener("touchend", hideLikes);
@@ -55,7 +55,15 @@
                 document.querySelectorAll("[hide-data]").forEach((hideElms) => {
                     hideElms.classList.remove("go");
                 })
-            }, 2800);
+            }, 2200);
+        }
+
+        document.querySelectorAll("[hide-data]").forEach((changeElms) => {
+            changeElms.addEventListener("click", changeLike);
+        })
+
+        function changeLike(ev) {
+            yesBtn.innerHTML = ev.target.innerHTML;
         }
     </script>
 </body>
