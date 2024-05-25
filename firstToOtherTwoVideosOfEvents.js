@@ -14,6 +14,14 @@ newDiv.addEventListener("click", () => {
 })
 document.body.appendChild(newDiv);
 
+/* document.addEventListener("click", (e) => {
+    // this is the same as
+    if (e.target.matches("div")) {
+        console.log("hfgrvrr")
+        console.log(e.target)
+    }
+}) */
+
 addGlobalEventListener("click", "div", e => {
     console.log("hi")
 })
