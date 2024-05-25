@@ -36,10 +36,16 @@
 
         function showLikes(ev) {
             ev.preventDefault();
+
             document.querySelectorAll("[hide-data]").forEach((hideElms) => {
                 hideElms.classList.add("go");
             })
-            console.log("good")
+
+            setTimeout(() => {
+                document.querySelectorAll("[hide-data]").forEach((hideElms) => {
+                    hideElms.classList.remove("go");
+                })
+            }, 5000);
         };
     </script>
 </body>
