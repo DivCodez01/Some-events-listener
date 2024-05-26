@@ -30,7 +30,7 @@
             // 4th
         });
         function upThing(ev) {
-            let num = ev.charCode || ev.which;
+            let num = ev.charCode || ev.which || ev.char; // is used to show character code
             let letter = String.fromCharCode(num);
             console.log(letter)
             console.log(ev.type, num, ev.target.value);
