@@ -14,6 +14,20 @@
     <main>
         <input type="text" id="txt" style="font-size: 30px;">
     </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let txt = document.getElementById("txt");
+            txt.addEventListener("keydown", upThing);
+            // 1st
+        });
+        function upThing(ev) {
+            let num = ev.charCode || ev.which;
+            let letter = String.fromCharCode(num);
+            console.log(letter)
+            console.log(ev.type, num, ev.target.value);
+            ev.target.value = ev.target.value.toUpperCase();
+        }
+    </script>
 </body>
 
 </html>
