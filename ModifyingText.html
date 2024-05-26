@@ -20,8 +20,11 @@
             // txt.addEventListener("keydown", upThing);
             // 1st
 
-            txt.addEventListener("keypress", upThing);
+            // txt.addEventListener("keypress", upThing);
             // 2nd
+
+            txt.addEventListener("keyup", upThing);
+            //3rd
         });
         function upThing(ev) {
             let num = ev.charCode || ev.which;
