@@ -22,8 +22,13 @@
         }
 
         const outAddNew = () => {
-            const ul = document.createElement("ul");
+            const ul = document.querySelector("ul");
             const li = document.createElement("li");
+
+            li.className = "list-item";
+            li.innerHTML = `Post number ${Date.now()}`;
+            li.addEventListener("click", removeItem);
+            ul.appendChild(li);
         }
     </script>
 </body>
