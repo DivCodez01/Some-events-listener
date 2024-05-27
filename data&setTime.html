@@ -15,6 +15,12 @@
             <li class="list-item">second post</li>
         </ul>
     </main>
+    <script>
+        const partyStarted = () => {
+            document.querySelectorAll("li").forEach(li => li.addEventListener("click", removeItem));
+            setInterval(outAddNew, 1000);
+        }
+    </script>
 </body>
 
 </html>
