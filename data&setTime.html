@@ -24,6 +24,10 @@
         function removeItem(ev) {
             let li = ev.currentTarget;
             li.className = "gold";
+
+            setTimeout((() => {
+                this.parentElement.removeChild(this);
+            }).bind(li), 10);
         };
 
         const outAddNew = () => {
