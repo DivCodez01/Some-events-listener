@@ -19,6 +19,7 @@
     <script>
         document.querySelector("p").addEventListener("touchstart", f)
         document.querySelector("p").addEventListener("touchend", f)
+        document.querySelector("p").addEventListener("touchmove", f)
 
         function f(ev) {
             console.log(ev.type, ev.touches);
