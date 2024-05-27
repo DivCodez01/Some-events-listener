@@ -25,7 +25,11 @@
             let li = ev.currentTarget;
             li.className = "gold";
 
-            setTimeout((() => {
+            // setTimeout((() => {
+            //     this.parentElement.removeChild(this);
+            // }).bind(li), 10);
+
+            setTimeout((function () {
                 this.parentElement.removeChild(this);
             }).bind(li), 10);
         };
