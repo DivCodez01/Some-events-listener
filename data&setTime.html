@@ -21,6 +21,11 @@
             setInterval(outAddNew, 1000);
         }
 
+        function removeItem(ev) {
+            let li = ev.currentTarget;
+            li.className = "gold";
+        };
+
         const outAddNew = () => {
             const ul = document.querySelector("ul");
             const li = document.createElement("li");
