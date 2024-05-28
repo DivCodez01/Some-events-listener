@@ -25,7 +25,9 @@
         };
 
         function dltElms(ev) {
-
+            setTimeout(() => {
+                this.parentElement.removeChild(this);
+            }, 1000);
         }
     </script>
 </body>
