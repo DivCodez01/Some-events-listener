@@ -19,8 +19,14 @@
     <script>
         document.addEventListener("DOMContentLoaded", writter);
         function writter(ev) {
-
+            document.querySelectorAll("ul li").forEach(li => {
+                li.addEventListener("click", dltElms);
+            })
         };
+
+        function dltElms(ev) {
+
+        }
     </script>
 </body>
 
