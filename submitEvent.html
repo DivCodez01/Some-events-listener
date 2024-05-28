@@ -25,9 +25,18 @@
 
         form.addEventListener("submit", (ev) => {
             ev.preventDefault()
-            console.log(document.querySelector("input:first-child").value)
-            console.log(document.querySelector("input:nth-child(2)").value)
-            console.log(document.querySelector("textarea").value)
+            // console.log(document.querySelector("input:first-child").value);
+            // console.log(document.querySelector("input:nth-child(2)").value);
+            // console.log(document.querySelector("textarea").value);
+
+            const name = document.querySelector("input");
+            console.log(name.value);
+
+            const email = document.querySelector("input:nth-child(2)");
+            console.log(email.value);
+
+            const intrYself = document.querySelector("textarea");
+            console.log(intrYself.value);
         })
     </script>
 </body>
