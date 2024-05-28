@@ -28,8 +28,6 @@
             line-height: 1.4em;
             height: 8.8em;
             transition: width .6s ease-in;
-            animation: .5s 1;
-            animation-name: glow;
         }
 
         @keyframes glow {
@@ -48,6 +46,8 @@
 
         p:hover {
             width: 40%;
+            animation: .5s 1;
+            /* animation-name: glow; */
         }
     </style>
 </head>
@@ -70,11 +70,15 @@
     <script>
         document.querySelectorAll("p").forEach(para => {
             para.addEventListener("transitionend", borderGlow);
-            para.addEventListener("animationend", borderGlow);
+            para.addEventListener("animationend", noGlow);
         })
 
         function borderGlow(ev) {
-            ev.target.style.animationName = "glow";
+            ev.currentTarget.style.animationName = "glow";
+        }
+
+        function noGlow(ev) {
+            ev.currentTarget.style.animationName = '';
         }
     </script>
 </body>
