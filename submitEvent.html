@@ -24,7 +24,10 @@
         const form = document.querySelector("form");
 
         form.addEventListener("submit", (ev) => {
-
+            ev.preventDefault()
+            console.log(document.querySelector("input:first-child").value)
+            console.log(document.querySelector("input:nth-child(2)").value)
+            console.log(document.querySelector("textarea").value)
         })
     </script>
 </body>
