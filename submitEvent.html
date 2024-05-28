@@ -13,12 +13,20 @@
 </head>
 
 <body>
-    <form>
+    <form onsubmit="">
         <input type="text" placeholder="username">
         <input type="email" placeholder="Email">
         <textarea rows="10"></textarea>
-        <button>Register</button>
+        <input type="submit" value="Register">
     </form>
+
+    <script>
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", (ev) => {
+
+        })
+    </script>
 </body>
 
 </html>
