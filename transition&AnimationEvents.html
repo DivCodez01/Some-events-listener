@@ -72,6 +72,10 @@
             para.addEventListener("transitionend", borderGlow);
             para.addEventListener("animationend", borderGlow);
         })
+
+        function borderGlow(ev) {
+            ev.target.style.animationName = "glow";
+        }
     </script>
 </body>
 
