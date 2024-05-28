@@ -22,18 +22,22 @@
             document.querySelectorAll("ul li").forEach(li => {
                 li.addEventListener("click", dltElms);
             })
+            setInterval(autoType, 1000);
         };
 
         function dltElms(ev) {
-            setTimeout(() => {
+            let li = ev.currentTarget;
+
+            setTimeout((() => {
                 this.parentElement.removeChild(this);
-            }, 1000);
+            }).bind(li), 10);
         }
 
         const autoType = (ev) => {
             const ul = document.querySelector("ul");
             const li = document.createElement("li");
             li.innerHTML = `Post number ${Date.now()}`;
+            li.addEventListener("click", dltElms)
             ul.appendChild(li);
         }
     </script>
