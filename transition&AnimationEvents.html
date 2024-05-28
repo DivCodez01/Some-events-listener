@@ -67,6 +67,12 @@
         nam magni omnis repellat, earum pariatur corporis cum voluptate distinctio sint voluptas repellendus iusto id.
     </p>
 
+    <script>
+        document.querySelectorAll("p").forEach(para => {
+            para.addEventListener("transitionend", borderGlow);
+            para.addEventListener("animationend", borderGlow);
+        })
+    </script>
 </body>
 
 </html>
