@@ -33,6 +33,8 @@
         const autoType = (ev) => {
             const ul = document.querySelector("ul");
             const li = document.createElement("li");
+            li.innerHTML = `Post number ${Date.now()}`;
+            ul.appendChild(li);
         }
     </script>
 </body>
