@@ -45,12 +45,13 @@
             const header = document.createElement("h4");
             header.innerHTML = hElms;
             header.addEventListener("born", hasBorn);
-            hElms.addEventListener("died", hadDied);
+            header.addEventListener("died", hasDied);
             header.dispatchEvent(born);
             parent.appendChild(header);
         };
 
         function removeInputSaveOnDiv(parent, hElms) {
+            hElms.dispatchEvent(died);
             parent.removeChild(hElms);
         };
 
@@ -59,7 +60,8 @@
         }
 
         function hasDied(ev) {
-            console.log(ev.type, ev.target, ev.detail.time)
+            prompt(ev.target);
+            console.log(ev.type, ev.target, ev.detail, prompt());
         }
     </script>
 </body>
