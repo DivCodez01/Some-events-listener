@@ -31,6 +31,13 @@
                     txt.value = ""
                 }
             });
+
+        }
+
+        function addInputElInDiv(parent, hElms) {
+            const header = document.createElement("h4");
+            header.innerHTML = hElms;
+            parent.appendChild(header);
         }
     </script>
 </body>
