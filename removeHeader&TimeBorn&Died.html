@@ -44,6 +44,8 @@
         function addInputElInDiv(parent, hElms) {
             const header = document.createElement("h4");
             header.innerHTML = hElms;
+            hElms.addEventListener(born, hasBorn);
+            hElms.addEventListener(died, hadDied);
             parent.appendChild(header);
         };
 
