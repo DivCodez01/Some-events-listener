@@ -23,11 +23,15 @@
             const btnAdd = document.getElementsByTagName("button")[0];
             const btnDelete = document.getElementsByTagName("button")[1];
             const div = document.querySelector("div");
+
+            btnAdd.addEventListener("click", function () {
+                if (txt.value) {
+                    let myInput = txt.value;
+                    addInputElInDiv(div, myInput);
+                    txt.value = ""
+                }
+            })
         }
-
-        btnAdd.addEventListener("click", function () {
-
-        })
     </script>
 </body>
 
