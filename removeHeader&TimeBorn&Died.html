@@ -16,6 +16,10 @@
     <div></div>
 
     <script>
+
+        const born = new CustomEvent("born", { detail: { time: Date.now() } });
+        const died = new CustomEvent("died", { detail: Date.now() });
+
         document.addEventListener("DOMContentLoaded", bodyMove);
 
         function bodyMove() {
