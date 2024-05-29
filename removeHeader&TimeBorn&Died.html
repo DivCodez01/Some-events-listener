@@ -33,7 +33,7 @@
             });
 
             btnDelete.addEventListener("click", () => {
-                removeInputSaveOnDiv(erijfef, dwidid)
+                removeInputSaveOnDiv(div, div.lastChild);
             });
         }
 
@@ -41,7 +41,11 @@
             const header = document.createElement("h4");
             header.innerHTML = hElms;
             parent.appendChild(header);
-        }
+        };
+
+        function removeInputSaveOnDiv(parent, hElms) {
+            parent.removeChild(hElms);
+        };
     </script>
 </body>
 
