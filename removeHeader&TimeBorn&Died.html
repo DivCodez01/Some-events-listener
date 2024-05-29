@@ -44,14 +44,23 @@
         function addInputElInDiv(parent, hElms) {
             const header = document.createElement("h4");
             header.innerHTML = hElms;
-            hElms.addEventListener(born, hasBorn);
-            hElms.addEventListener(died, hadDied);
+            header.addEventListener("born", hasBorn);
+            hElms.addEventListener("died", hadDied);
+            header.dispatchEvent(born);
             parent.appendChild(header);
         };
 
         function removeInputSaveOnDiv(parent, hElms) {
             parent.removeChild(hElms);
         };
+
+        function hasBorn(ev) {
+            console.log(ev.type, ev.target, ev.detail.time);
+        }
+
+        function hasDied(ev) {
+            console.log(ev.type, ev.target, ev.detail.time)
+        }
     </script>
 </body>
 
