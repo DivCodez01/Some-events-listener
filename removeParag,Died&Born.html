@@ -27,6 +27,9 @@
             //     addArrayElms += `<p>${values[i]}</p>`;
             // }
             // pElms.innerHTML = addArrayElms;
+            values.forEach(value => {
+                pElms.innerHTML += `<p>${value}</p>`;
+            })
         }
 
         addElms(main, paraElms)
