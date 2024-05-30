@@ -25,6 +25,20 @@
             let _orn = screen.msOrientation ||
                 (screen.orientation).type;
             return _orn;
+
+            switch (_orn) {
+                case "portrait-primary":
+                    break;
+                case "portrait-secondary":
+                    break;
+                case "landscape-primary":
+                    console.log("This is laptop/desktop version")
+                    break;
+                case "landscape-secondary":
+                    break;
+                case "undefined":
+                    break;
+            }
         }
     </script>
 </body>
