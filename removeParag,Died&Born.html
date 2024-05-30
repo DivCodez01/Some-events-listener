@@ -14,7 +14,7 @@
 
     <script>
 
-        const born = new CustomEvent("born", { object: { time: Date.now() } });
+        let born = new Event("born")
         const died = new CustomEvent("died", { object: Date.now() });
 
 
@@ -25,9 +25,15 @@
             "This is fourth paragraph"
         ];
 
-        addElms(main, paraElms);
+        document.addEventListener("DOMContentLoaded", function () {
+            const main = document.querySelector("main");
+            addElms(main, paraElms);
+            main.addEventListener("click", function (e) {
+                e.currentTarget.firstElementChild.remove();
+                console.log(e.target);
+            })
+        });
 
-        const main = document.querySelector("main");
         const addElms = (pElms, values) => {
             // let addArrayElms = "";
             // for (let i = 0; i < values.length; i++) {
@@ -35,13 +41,17 @@
             // }
             // pElms.innerHTML = addArrayElms;
             values.forEach(value => {
-                pElms.innerHTML += `<p>${value}</p>`;
-                value.addEventListener("born", hasBorn);
-                value.addEventListener("born", hasDied);
+                const parag = document.createElement("p");
+                parag.innerHTML = value;
+                pElms.appendChild(parag);
             });
         }
 
         function hasBorn(ev) {
+            console.log(ev.type, ev.target.tagName, ev.target.innerHTML, ev.target.object.time)
+        }
+
+        function hasDied(ev) {
             console.log(ev.type, ev.target.tagName, ev.target.innerHTML, ev.target.object.time)
         }
     </script>
