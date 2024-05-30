@@ -22,7 +22,9 @@
         out.innerHTML = orn;
 
         function getOrientation() {
-
+            let _orn = screen.msOrientation ||
+                (screen.orientation).type;
+            return _orn;
         }
     </script>
 </body>
