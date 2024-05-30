@@ -34,6 +34,8 @@
             // pElms.innerHTML = addArrayElms;
             values.forEach(value => {
                 pElms.innerHTML += `<p>${value}</p>`;
+                value.addEventListener("born", hasBorn);
+                value.addEventListener("born", hasDied);
             });
         }
 
