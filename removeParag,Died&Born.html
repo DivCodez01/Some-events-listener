@@ -14,8 +14,8 @@
 
     <script>
 
-        const born = new CustomEvent("born", { objects: { time: Date.now() } });
-        const died = new CustomEvent("died", { objects: Date.now() });
+        const born = new CustomEvent("born", { object: { time: Date.now() } });
+        const died = new CustomEvent("died", { object: Date.now() });
 
 
         let paraElms = [
@@ -24,6 +24,8 @@
             "This is third paragraph",
             "This is fourth paragraph"
         ];
+
+        addElms(main, paraElms);
 
         const main = document.querySelector("main");
         const addElms = (pElms, values) => {
@@ -39,7 +41,9 @@
             });
         }
 
-        addElms(main, paraElms)
+        function hasBorn(ev) {
+            console.log(ev.type, ev.target.tagName, ev.target.innerHTML, ev.target.object.time)
+        }
     </script>
 </body>
 
