@@ -13,10 +13,23 @@
     </main>
 
     <script>
-        let paraElms = ["This is first paragraph", "This is second paragraph", "This is third paragraph", "This is fourth paragraph"];
-        const addElms = (para, value) => {
+        let paraElms = [
+            "This is first paragraph",
+            "This is second paragraph",
+            "This is third paragraph",
+            "This is fourth paragraph"
+        ];
 
+        const main = document.querySelector("main");
+        const addElms = (pElms, values) => {
+            // let addArrayElms = "";
+            // for (let i = 0; i < values.length; i++) {
+            //     addArrayElms += `<p>${values[i]}</p>`;
+            // }
+            // pElms.innerHTML = addArrayElms;
         }
+
+        addElms(main, paraElms)
     </script>
 </body>
 
