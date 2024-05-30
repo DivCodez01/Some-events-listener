@@ -28,10 +28,15 @@
         document.addEventListener("DOMContentLoaded", function () {
             const main = document.querySelector("main");
             addElms(main, paraElms);
-            main.addEventListener("click", function (e) {
-                e.currentTarget.firstElementChild.remove();
-                console.log(e.target);
-            })
+            main.addEventListener("click", removeFirstChild);
+
+            function removeFirstChild(ev) {
+                main.firstElementChild.remove();
+                // console.log(main);
+                // console.log(ev.target);
+                ev.target.dispatchEvent(died);
+
+            }
         });
 
         const addElms = (pElms, values) => {
@@ -44,6 +49,8 @@
                 const parag = document.createElement("p");
                 parag.innerHTML = value;
                 pElms.appendChild(parag);
+                parag.addEventListener("died", hasDied);
+                parag.addEventListener("born", hasBorn);
             });
         }
 
@@ -52,7 +59,7 @@
         }
 
         function hasDied(ev) {
-            console.log(ev.type, ev.target.tagName, ev.target.innerHTML, ev.target.object.time)
+            console.log(ev.type, ev.target.tagName, ev.target.innerHTML, ev.object)
         }
     </script>
 </body>
