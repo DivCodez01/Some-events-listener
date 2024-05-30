@@ -13,6 +13,11 @@
     </main>
 
     <script>
+
+        const born = new CustomEvent("born", { objects: { time: Date.now() } });
+        const died = new CustomEvent("died", { objects: Date.now() });
+
+
         let paraElms = [
             "This is first paragraph",
             "This is second paragraph",
@@ -29,7 +34,7 @@
             // pElms.innerHTML = addArrayElms;
             values.forEach(value => {
                 pElms.innerHTML += `<p>${value}</p>`;
-            })
+            });
         }
 
         addElms(main, paraElms)
