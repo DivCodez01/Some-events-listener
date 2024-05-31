@@ -5,6 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div {
+            border: 2px solid black;
+            padding: 30px;
+        }
+
+        .menu {
+            list-style-type: none;
+            background: black;
+            border: 2px solid black;
+            width: 90px;
+            color: white;
+            padding: 1.5em 5px 5px 5px;
+        }
+
+        .menu li {
+            padding-bottom: .5em;
+            padding-left: .5em;
+            padding-top: .5em;
+            font-family: Arial;
+            font-size: .8em;
+            border-radius: 8px;
+            position: relative;
+
+        }
+
+        .menu li:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,7 +47,7 @@
     </div>
 
     <ul class="menu">
-        <li></li>
+        <li>Color</li>
         <li class="menu-item" id="red">Red Item</li>
         <li class="menu-item" id="gold">Gold Item</li>
         <li class="menu-item" id="green">Green Item</li>
