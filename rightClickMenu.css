@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    border: 2px solid black;
+    padding: 30px;
+}
+
+.menu {
+    list-style-type: none;
+    background: black;
+    border: 2px solid black;
+    width: 90px;
+    color: white;
+    padding: 0 0 5px 0px;
+    text-align: center;
+    border-radius: 8px;
+    position: absolute;
+    top: -200%;
+    left: -200%;
+    transition: .1s ease-in;
+}
+
+.menu::before {
+    content: "Color";
+    font-size: 18px;
+    position: relative;
+    padding: 0px 25px 5px 25px;
+    background: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: black;
+    left: 0;
+}
+
+.menu li {
+    padding-bottom: .5em;
+    padding-left: .5em;
+    padding-top: .5em;
+    font-family: Arial;
+    font-size: .8em;
+    border-radius: 8px;
+    position: relative;
+    text-align: start;
+
+}
+
+.menu li:hover {
+    background-color: rgb(168, 168, 168);
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.leave {
+    display: none;
+}
