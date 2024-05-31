@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
         div {
             border: 2px solid black;
             padding: 30px;
@@ -21,6 +26,9 @@
             text-align: center;
             border-radius: 8px;
             position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
         }
 
         .menu::before {
@@ -79,6 +87,10 @@
 
         function changeColor(ev) {
             ev.preventDefault();
+
+            colorElms.style.top = `${ev.pageY - 10}px`;
+            colorElms.style.left = `${ev.offsetX - 10}px`;
+            colorElms.style.display = "initial";
         }
     </script>
 </body>
