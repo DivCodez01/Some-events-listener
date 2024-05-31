@@ -5,67 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        div {
-            border: 2px solid black;
-            padding: 30px;
-        }
-
-        .menu {
-            list-style-type: none;
-            background: black;
-            border: 2px solid black;
-            width: 90px;
-            color: white;
-            padding: 0 0 5px 0px;
-            text-align: center;
-            border-radius: 8px;
-            position: absolute;
-            top: -200%;
-            left: -200%;
-            transition: .1s ease-in;
-        }
-
-        .menu::before {
-            content: "Color";
-            font-size: 18px;
-            position: relative;
-            padding: 0px 25px 5px 25px;
-            background: white;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            color: black;
-            left: 0;
-        }
-
-        .menu li {
-            padding-bottom: .5em;
-            padding-left: .5em;
-            padding-top: .5em;
-            font-family: Arial;
-            font-size: .8em;
-            border-radius: 8px;
-            position: relative;
-            text-align: start;
-
-        }
-
-        .menu li:hover {
-            background-color: rgb(168, 168, 168);
-            color: black;
-            border: 1px solid black;
-            cursor: pointer;
-        }
-
-        .leave {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="rightClickMenu.css">
+    <script src="rightClickMenu.js"></script>
 </head>
 
 <body>
@@ -81,42 +22,6 @@
         <li class="menu-item" id="gold">Gold Item</li>
         <li class="menu-item" id="green">Green Item</li>
     </ul>
-
-    <script>
-        const div = document.querySelector("div");
-        const colorElms = document.querySelector("ul");
-        const colors = document.getElementsByTagName("li");
-
-        div.addEventListener("contextmenu", showColorElements);
-
-        function showColorElements(ev) {
-            ev.preventDefault();
-
-            colorElms.style.top = `${ev.pageY - 10}px`;
-            colorElms.style.left = `${ev.offsetX - 10}px`;
-        }
-
-        colorElms.addEventListener("mouseleave", leaveColorConteiner);
-
-        function leaveColorConteiner(ev) {
-            colorElms.style.top = "-200%";
-            colorElms.style.left = "-200px";
-        }
-
-        Array.from(colors).forEach(function (color) {
-            color.addEventListener("click", changeColor);
-
-            function changeColor(ev) {
-                if (color.innerHTML == "Red Item") {
-                    div.style.background = "red";
-                } else if (color.innerHTML == "Gold Item") {
-                    div.style.background = "gold";
-                } else if (color.innerHTML == "Green Item") {
-                    div.style.background = "green";
-                }
-            }
-        })
-    </script>
 </body>
 
 </html>
