@@ -17,7 +17,21 @@
             border: 2px solid black;
             width: 90px;
             color: white;
-            padding: 1.5em 5px 5px 5px;
+            padding: 0 0 5px 0px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .menu::before {
+            content: "Color";
+            font-size: 18px;
+            position: relative;
+            padding: 0px 25px 5px 25px;
+            background: white;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            color: black;
+            left: 0;
         }
 
         .menu li {
@@ -28,12 +42,15 @@
             font-size: .8em;
             border-radius: 8px;
             position: relative;
+            text-align: start;
 
         }
 
         .menu li:hover {
             background-color: white;
             color: black;
+            border: 1px solid black;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -47,7 +64,6 @@
     </div>
 
     <ul class="menu">
-        <li>Color</li>
         <li class="menu-item" id="red">Red Item</li>
         <li class="menu-item" id="gold">Gold Item</li>
         <li class="menu-item" id="green">Green Item</li>
