@@ -20,6 +20,7 @@
             padding: 0 0 5px 0px;
             text-align: center;
             border-radius: 8px;
+            position: absolute;
         }
 
         .menu::before {
@@ -72,7 +73,13 @@
     <script>
         const div = document.querySelector("div");
         const colorElms = document.querySelector("ul");
-        const changeColor = document.getElementsByTagName("li");
+        const color = document.getElementsByTagName("li");
+
+        div.addEventListener("contextmenu", changeColor);
+
+        function changeColor(ev) {
+            ev.preventDefault();
+        }
     </script>
 </body>
 
