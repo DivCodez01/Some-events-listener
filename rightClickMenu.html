@@ -87,9 +87,9 @@
         const colorElms = document.querySelector("ul");
         const colors = document.getElementsByTagName("li");
 
-        div.addEventListener("contextmenu", changeColor);
+        div.addEventListener("contextmenu", showColorElements);
 
-        function changeColor(ev) {
+        function showColorElements(ev) {
             ev.preventDefault();
 
             colorElms.style.top = `${ev.pageY - 10}px`;
@@ -104,6 +104,11 @@
         }
 
         Array.from(colors).forEach(function (color) {
+            color.addEventListener("click", changeColor);
+
+            function changeColor(ev) {
+
+            }
         })
     </script>
 </body>
