@@ -56,7 +56,7 @@
         }
 
         .menu li:hover {
-            background-color: white;
+            background-color: rgb(168, 168, 168);
             color: black;
             border: 1px solid black;
             cursor: pointer;
@@ -85,7 +85,7 @@
     <script>
         const div = document.querySelector("div");
         const colorElms = document.querySelector("ul");
-        const color = document.getElementsByTagName("li");
+        const colors = document.getElementsByTagName("li");
 
         div.addEventListener("contextmenu", changeColor);
 
@@ -102,6 +102,9 @@
             colorElms.style.top = "-200%";
             colorElms.style.left = "-200px";
         }
+
+        Array.from(colors).forEach(function (color) {
+        })
     </script>
 </body>
 
