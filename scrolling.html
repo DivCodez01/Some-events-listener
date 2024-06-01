@@ -19,6 +19,26 @@
             position: relative;
             z-index: -1;
         }
+
+        main.up {
+            transform: translateY(-600px);
+        }
+
+        p::before {
+            content: attr(data-num);
+
+            font-size: 2.6rem;
+            line-height: 3rem;
+            height: 3rem;
+            width: 3rem;
+            text-align: center;
+            margin-right: 1rem;
+            display: inline-block;
+            transform: rotate(-20deg);
+            background-color: #666;
+            color: #eee;
+            border-radius: 50%;
+        }
     </style>
 </head>
 
