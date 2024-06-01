@@ -131,6 +131,13 @@
 
             console.log("page", ev.pageX, ev.pageY);
             // top of the document(webpage)
+            console.log("offset", h1.offsetLeft, h1.offsetTop)
+            console.log("screen window", window.screenX, window.screenY)
+            console.log("screen ev", ev.screenX, ev.screenY)
+            console.groupEnd();
+
+            console.group();
+            console.groupEnd();
         });
     </script>
 </body>
