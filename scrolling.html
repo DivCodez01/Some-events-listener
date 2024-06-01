@@ -111,6 +111,17 @@
             // top of the visible screen
 
             console.log("page", ev.pageX, ev.pageY);
+            // top of the document(webpage)
+            console.log("offset", h1.offsetLeft, h1.offsetTop)
+            console.log("screen window", window.screenX, window.screenY)
+            console.log("screen ev", ev.screenX, ev.screenY)
+            console.groupEnd();
+            window.scrollBy(0, 600);
+            window.body.h2.style.backgroundColor = "red"
+            h2.innerHTML = "dhudheudhedu"
+
+            // document.querySelector("main").classList.toggle("up")
+
         });
     </script>
 </body>
