@@ -101,6 +101,17 @@
     <script>
         let h2 = document.querySelector("h2");
         let h1 = document.querySelector("h1");
+
+        h1.addEventListener("click", (ev) => {
+            // scrollBy(x, y) scrollTo(x, y)
+            // scroll(X) scrollY(y)
+            // onscroll
+            console.group();
+            console.log("client", ev.clientX, ev.clientY);
+            // top of the visible screen
+
+            console.log("page", ev.pageX, ev.pageY);
+        });
     </script>
 </body>
 
